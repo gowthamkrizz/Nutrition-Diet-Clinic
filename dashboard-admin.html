@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard – Stackly Clinical Management</title>
+  <meta name="description" content="Clinical administration dashboard for Stackly Nutrition Clinic. Manage patients, monitor consultations, and review diagnostics.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="icon" type="image/webp" href="assets/images/stackly-logo.webp">
+</head>
+<body class="dashboard-body">
+
+  <div class="dash-shell">
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div class="dash-sidebar-overlay js-sidebar-overlay"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="dash-sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <a href="index.html">
+            <img src="assets/images/stackly-logo-white.webp" alt="Stackly Admin" width="130" height="42">
+          </a>
+          <button type="button" class="sidebar-close-btn js-sidebar-close" aria-label="Close sidebar">
+            <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          </button>
+        </div>
+
+        <div class="sidebar-menu">
+          <span class="menu-label">Main Clinical Hub</span>
+          <a href="#overview" class="menu-item active">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+              <span>Overview</span>
+            </div>
+          </a>
+          <a href="#appointments" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+              <span>Consultations</span>
+            </div>
+            <span class="menu-badge">28</span>
+          </a>
+          <a href="#telehealth-desk" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+              <span>Telehealth HD Hub</span>
+            </div>
+            <span class="menu-badge live-dot">● Live</span>
+          </a>
+          <a href="#patients" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              <span>Patient Roster</span>
+            </div>
+            <span class="menu-badge">1,482</span>
+          </a>
+          <a href="#dietitians" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+              <span>Dietitians on Duty</span>
+            </div>
+          </a>
+
+          <span class="menu-label">Diagnostics & Care</span>
+          <a href="#lab-reports" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              <span>Lab Reports & CGM</span>
+            </div>
+            <span class="menu-badge">12 New</span>
+          </a>
+          <a href="#diet-protocols" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1zm15.03-7V7.05H1v7.94c0 3.84 2.81 7.01 6.51 7.01 3.71 0 6.52-3.17 6.52-7.01z"/></svg>
+              <span>Therapeutic Protocols</span>
+            </div>
+          </a>
+          <a href="#supplement-inventory" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              <span>Clinical Dispensary</span>
+            </div>
+          </a>
+
+          <span class="menu-label">Practice Management</span>
+          <a href="#revenue" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+              <span>Billing & Superbills</span>
+            </div>
+          </a>
+          <a href="#clinic-branches" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Clinic Locations & Rooms</span>
+            </div>
+          </a>
+          <a href="#audit-compliance" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+              <span>HIPAA Compliance</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sidebar Footer User -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <img src="assets/images/team-1.webp" alt="User Profile" width="40" height="40" class="user-avatar-img">
+          <div class="sidebar-user-info">
+            <h6 class="user-display-name">Dr. Daniel Carter</h6>
+            <p class="user-display-email" title="daniel.carter@stacklycare.com">daniel.carter@stacklycare.com</p>
+          </div>
+        </div>
+        <a href="login.html" class="sidebar-logout-btn" id="adminLogoutBtn" title="Log Out of Admin">
+          <svg viewBox="0 0 24 24">
+            <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+          </svg>
+          <span>Log Out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Section -->
+    <div class="dash-main">
+      <!-- Navbar -->
+      <header class="dash-navbar">
+        <div class="navbar-left">
+          <button class="dash-menu-toggle" aria-label="Toggle Navigation">
+            <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+          <div class="dash-search">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" placeholder="Search patients, lab records, diet plans...">
+          </div>
+        </div>
+
+        <div class="navbar-right">
+          <!-- Dark Mode Switcher -->
+          <button class="nav-icon-btn js-dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+            <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </button>
+
+          <!-- Notifications -->
+          <button class="nav-icon-btn" aria-label="Notifications" onclick="window.location.href='404.html';">
+            <span class="badge-dot"></span>
+            <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+          </button>
+
+          <a href="index.html" class="btn-outline" style="height: 38px; line-height: 36px; padding: 0 16px; font-size: 0.85rem;">
+            Public Site
+          </a>
+        </div>
+      </header>
+
+      <!-- Dashboard Content Body -->
+      <main class="dash-content">
+        <!-- Section: Overview -->
+        <section id="overview" class="dash-panel active-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Clinical Operations Overview</h2>
+              <p>Welcome back, Dr. Carter. 28 patient consultations are scheduled across the clinical network today.</p>
+            </div>
+            <a href="404.html" class="btn-style2 btn-teal" style="height: 46px; line-height: 46px; font-size: 0.88rem;">
+              <span class="theme-btn">+ Register New Patient</span>
+              <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+            </a>
+          </div>
+
+          <!-- 4 Stats Overview Grid -->
+          <div class="dash-stats-grid">
+            <!-- Stat 1 -->
+            <div class="dash-stat-card">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              </div>
+              <div class="stat-info">
+                <h3>1,482</h3>
+                <p>Active Enrolled Patients</p>
+                <span class="stat-change up">↑ +14.2% this month</span>
+              </div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="dash-stat-card">
+              <div class="stat-icon icon-accent">
+                <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+              </div>
+              <div class="stat-info">
+                <h3>28</h3>
+                <p>Consultations Today</p>
+                <span class="stat-change up">↑ 4 video calls pending</span>
+              </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="dash-stat-card">
+              <div class="stat-icon icon-success">
+                <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+              </div>
+              <div class="stat-info">
+                <h3>$48,920</h3>
+                <p>Monthly Care Revenue</p>
+                <span class="stat-change up">↑ +21.8% vs target</span>
+              </div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="dash-stat-card">
+              <div class="stat-icon icon-warning">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <div class="stat-info">
+                <h3>98.4%</h3>
+                <p>Patient Satisfaction</p>
+                <span class="stat-change up"><span class="material-symbols-outlined" style="font-size: 0.95rem; vertical-align: -2px;">star</span> Top Rated Clinic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2-Column Analytics & Domain Breakdown -->
+          <div class="dash-grid-2">
+            <!-- Intake Bar Chart -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h4>Monthly Consultation Volume (2026)</h4>
+                <span style="font-size: 0.82rem; color: var(--dash-text-muted);">Total Consultations: 2,420</span>
+              </div>
+              <div class="chart-bars-wrap">
+                <div class="bar-col"><div class="bar-pill" style="height: 45%;"></div><span class="bar-label">Jan</span></div>
+                <div class="bar-col"><div class="bar-pill" style="height: 52%;"></div><span class="bar-label">Feb</span></div>
+                <div class="bar-col"><div class="bar-pill" style="height: 60%;"></div><span class="bar-label">Mar</span></div>
+                <div class="bar-col"><div class="bar-pill" style="height: 58%;"></div><span class="bar-label">Apr</span></div>
+                <div class="bar-col"><div class="bar-pill" style="height: 72%;"></div><span class="bar-label">May</span></div>
+                <div class="bar-col"><div class="bar-pill" style="height: 68%;"></div><span class="bar-label">Jun</span></div>
+                <div class="bar-col"><div class="bar-pill" style="height: 84%;"></div><span class="bar-label">Jul</span></div>
+                <div class="bar-col"><div class="bar-pill" style="height: 78%;"></div><span class="bar-label">Aug</span></div>
+                <div class="bar-col"><div class="bar-pill" style="height: 92%;"></div><span class="bar-label">Sep</span></div>
+                <div class="bar-col"><div class="bar-pill" style="height: 96%; background: var(--theme-color1-darker);"></div><span class="bar-label" style="font-weight: 700; color: var(--theme-color3);">Oct</span></div>
+              </div>
+            </div>
+
+            <!-- Clinical Domain Distribution -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h4>Care Domains Breakdown</h4>
+                <span style="font-size: 0.82rem; color: var(--dash-text-muted);">Active Protocols</span>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 10px;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">
+                    <span>Medical Nutrition Therapy</span>
+                    <span>38%</span>
+                  </div>
+                  <div style="height: 8px; background: var(--dash-border); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 38%; height: 100%; background: var(--dash-primary);"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">
+                    <span>Digestive & Gut Wellness</span>
+                    <span>26%</span>
+                  </div>
+                  <div style="height: 8px; background: var(--dash-border); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 26%; height: 100%; background: var(--dash-accent-dark);"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">
+                    <span>Metabolic Weight Care</span>
+                    <span>20%</span>
+                  </div>
+                  <div style="height: 8px; background: var(--dash-border); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 20%; height: 100%; background: var(--dash-success);"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">
+                    <span>Family & Pediatric Diets</span>
+                    <span>16%</span>
+                  </div>
+                  <div style="height: 8px; background: var(--dash-border); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 16%; height: 100%; background: #4299e1;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Consultations -->
+        <section id="appointments" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Today's Patient Consultations</h2>
+              <p>28 appointments scheduled today across In-Person & Telehealth suites</p>
+            </div>
+            <input type="text" class="js-admin-table-search" placeholder="Filter consultations by specialist or domain..." style="padding: 8px 16px; border: 1px solid var(--dash-border); border-radius: 8px; font-size: 0.85rem; background: var(--dash-card); color: var(--dash-text-dark); width: 280px;">
+          </div>
+
+          <div class="dash-card">
+
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Patient Name</th>
+                    <th>Assigned Specialist</th>
+                    <th>Clinical Domain</th>
+                    <th>Time & Mode</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="assets/images/avatar-1.webp" alt="Sarah Jenkins" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                          <strong>Sarah Jenkins</strong>
+                          <div style="font-size: 0.78rem; color: var(--dash-text-muted);">PID-8942</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Dr. Emily Carter</td>
+                    <td>Digestive Microbiome</td>
+                    <td>10:30 AM • Video Call</td>
+                    <td><span class="status-badge confirmed">Confirmed</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">View Record</button></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="assets/images/avatar-2.webp" alt="David Miller" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                          <strong>David Miller</strong>
+                          <div style="font-size: 0.78rem; color: var(--dash-text-muted);">PID-8943</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Dr. Daniel Carter</td>
+                    <td>Metabolic Reset</td>
+                    <td>11:45 AM • In-Person</td>
+                    <td><span class="status-badge in-progress">In Session</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">View Record</button></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="assets/images/avatar-3.webp" alt="Jessica Hayes" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                          <strong>Jessica Hayes</strong>
+                          <div style="font-size: 0.78rem; color: var(--dash-text-muted);">PID-8944</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Emma Wilson</td>
+                    <td>Pediatric Allergy Care</td>
+                    <td>02:15 PM • Video Call</td>
+                    <td><span class="status-badge pending">Pending Lab</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">View Record</button></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="assets/images/avatar-4.webp" alt="Marcus Thorne" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                          <strong>Marcus Thorne</strong>
+                          <div style="font-size: 0.78rem; color: var(--dash-text-muted);">PID-8945</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Michael Turner</td>
+                    <td>Sports Performance</td>
+                    <td>03:30 PM • Video Call</td>
+                    <td><span class="status-badge confirmed">Confirmed</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">View Record</button></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="assets/images/avatar-1.webp" alt="Hannah Abbott" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                          <strong>Hannah Abbott</strong>
+                          <div style="font-size: 0.78rem; color: var(--dash-text-muted);">PID-8946</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Dr. Emily Carter</td>
+                    <td>Senior Bone Health</td>
+                    <td>09:00 AM • In-Person</td>
+                    <td><span class="status-badge completed">Completed</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">View Record</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Telehealth Command Desk -->
+        <section id="telehealth-desk" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Telehealth HD Command Hub</h2>
+              <p>HIPAA-encrypted live video consultation rooms active across clinical network</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">+ Create Ad-Hoc Room</button>
+          </div>
+
+          <div class="dash-grid-3">
+            <!-- Room 1 -->
+            <div class="telehealth-room-card">
+              <div>
+                <div class="room-card-top">
+                  <span class="room-status-badge live">● Active Session</span>
+                  <span style="font-size: 0.78rem; color: var(--dash-text-muted); font-weight: 700;">Room 101-A</span>
+                </div>
+                <div class="room-doctor-row">
+                  <img src="assets/images/team-2.webp" alt="Dr. Emily Carter">
+                  <div>
+                    <h5>Dr. Emily Carter</h5>
+                    <p>Patient: Sarah Jenkins (Week 4 Review)</p>
+                  </div>
+                </div>
+                <p style="font-size: 0.84rem; color: var(--dash-text-muted); margin-bottom: 14px;">
+                  Session Time: <strong>10:30 AM – 11:15 AM</strong> • 1080p Encrypted Stream
+                </p>
+              </div>
+              <button class="action-btn-sm" style="width: 100%; text-align: center;" onclick="window.location.href='404.html';">Observer Mode</button>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="telehealth-room-card">
+              <div>
+                <div class="room-card-top">
+                  <span class="room-status-badge upcoming">Waiting for Host</span>
+                  <span style="font-size: 0.78rem; color: var(--dash-text-muted); font-weight: 700;">Room 102-B</span>
+                </div>
+                <div class="room-doctor-row">
+                  <img src="assets/images/team-3.webp" alt="Emma Wilson">
+                  <div>
+                    <h5>Emma Wilson, MS RD</h5>
+                    <p>Patient: Jessica Hayes (Intake)</p>
+                  </div>
+                </div>
+                <p style="font-size: 0.84rem; color: var(--dash-text-muted); margin-bottom: 14px;">
+                  Session Time: <strong>02:15 PM – 03:00 PM</strong> • Diagnostic intake
+                </p>
+              </div>
+              <button class="action-btn-sm" style="width: 100%; text-align: center; background: var(--dash-primary); color: #fff;" onclick="window.location.href='404.html';">Join as Host</button>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="telehealth-room-card">
+              <div>
+                <div class="room-card-top">
+                  <span class="room-status-badge upcoming">Ready to Launch</span>
+                  <span style="font-size: 0.78rem; color: var(--dash-text-muted); font-weight: 700;">Room 103-C</span>
+                </div>
+                <div class="room-doctor-row">
+                  <img src="assets/images/team-4.webp" alt="Michael Turner">
+                  <div>
+                    <h5>Michael Turner, CNS</h5>
+                    <p>Patient: Marcus Thorne (Athletic Lab)</p>
+                  </div>
+                </div>
+                <p style="font-size: 0.84rem; color: var(--dash-text-muted); margin-bottom: 14px;">
+                  Session Time: <strong>03:30 PM – 04:15 PM</strong> • Biomarker debrief
+                </p>
+              </div>
+              <button class="action-btn-sm" style="width: 100%; text-align: center;" onclick="window.location.href='404.html';">Send Patient Ping</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Patient Roster -->
+        <section id="patients" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Enrolled Patient Roster</h2>
+              <p>Active clinical caseload, longitudinal biomarker progress, and primary care dietitians</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Export Roster (CSV)</button>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Patient Record</th>
+                    <th>Clinical Program</th>
+                    <th>Care Specialist</th>
+                    <th>Biomarker Change</th>
+                    <th>Adherence</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Sarah Jenkins</strong>
+                      <div style="font-size: 0.78rem; color: var(--dash-text-muted);">PID-8942 • Female • 34 yrs</div>
+                    </td>
+                    <td>Metabolic Reset & SIBO</td>
+                    <td>Dr. Emily Carter</td>
+                    <td><span style="color: var(--dash-success); font-weight: 700;">↓ Fasting Glucose -18 mg/dL</span></td>
+                    <td><span class="status-badge confirmed">94% High</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">Full File</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>David Miller</strong>
+                      <div style="font-size: 0.78rem; color: var(--dash-text-muted);">PID-8943 • Male • 46 yrs</div>
+                    </td>
+                    <td>Cardiovascular Lipid Balance</td>
+                    <td>Dr. Daniel Carter</td>
+                    <td><span style="color: var(--dash-success); font-weight: 700;">↓ hs-CRP -1.4 mg/L</span></td>
+                    <td><span class="status-badge in-progress">82% Moderate</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">Full File</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Jessica Hayes</strong>
+                      <div style="font-size: 0.78rem; color: var(--dash-text-muted);">PID-8944 • Female • 29 yrs</div>
+                    </td>
+                    <td>Pediatric & Maternal Nutrition</td>
+                    <td>Emma Wilson, MS RD</td>
+                    <td><span style="color: var(--dash-warning); font-weight: 700;">Pending 30-day blood draw</span></td>
+                    <td><span class="status-badge pending">Awaiting Intake</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">Full File</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Marcus Thorne</strong>
+                      <div style="font-size: 0.78rem; color: var(--dash-text-muted);">PID-8945 • Male • 31 yrs</div>
+                    </td>
+                    <td>Endurance Athletics & VO2 Max</td>
+                    <td>Michael Turner, CNS</td>
+                    <td><span style="color: var(--dash-success); font-weight: 700;">↑ VO2 Max +3.8 mL/kg</span></td>
+                    <td><span class="status-badge confirmed">98% Strict</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">Full File</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Dietitians & Care Team -->
+        <section id="dietitians" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Dietitians & Specialists on Duty</h2>
+              <p>Certified clinical nutritionists, medical doctors, and sports dietitians</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Assign Caseload</button>
+          </div>
+
+          <div class="dash-grid-3">
+            <div class="dash-card">
+              <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+                <img src="assets/images/team-1.webp" alt="Dr. Daniel Carter" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover;">
+                <div>
+                  <h5 style="margin: 0; font-size: 1.05rem; font-weight: 700; color: var(--dash-text-dark);">Dr. Daniel Carter</h5>
+                  <p style="margin: 2px 0 0; font-size: 0.8rem; color: var(--dash-text-muted);">Medical Director • MD, FACN</p>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--dash-text-muted); margin-bottom: 12px;">Active Patients: <strong>320</strong> • Next Slot: <strong>Today 11:45 AM</strong></p>
+              <span class="status-badge confirmed">On Duty • In Clinic</span>
+            </div>
+
+            <div class="dash-card">
+              <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+                <img src="assets/images/team-2.webp" alt="Dr. Emily Carter" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover;">
+                <div>
+                  <h5 style="margin: 0; font-size: 1.05rem; font-weight: 700; color: var(--dash-text-dark);">Dr. Emily Carter</h5>
+                  <p style="margin: 2px 0 0; font-size: 0.8rem; color: var(--dash-text-muted);">Lead Clinical Dietitian • MS, RDN</p>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--dash-text-muted); margin-bottom: 12px;">Active Patients: <strong>410</strong> • Next Slot: <strong>Today 03:30 PM</strong></p>
+              <span class="status-badge in-progress">In Telehealth Room</span>
+            </div>
+
+            <div class="dash-card">
+              <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+                <img src="assets/images/team-3.webp" alt="Emma Wilson" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover;">
+                <div>
+                  <h5 style="margin: 0; font-size: 1.05rem; font-weight: 700; color: var(--dash-text-dark);">Emma Wilson, MS RD</h5>
+                  <p style="margin: 2px 0 0; font-size: 0.8rem; color: var(--dash-text-muted);">Pediatric & Allergy Specialist</p>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--dash-text-muted); margin-bottom: 12px;">Active Patients: <strong>265</strong> • Next Slot: <strong>Today 02:15 PM</strong></p>
+              <span class="status-badge confirmed">On Duty • Ready</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Lab Diagnostics & CGM Biomarkers -->
+        <section id="lab-reports" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Lab Diagnostics & Continuous Glucose Monitoring</h2>
+              <p>Recent high-priority biomarker updates requiring clinician sign-off</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">+ Import Lab Draw</button>
+          </div>
+
+          <div class="dash-grid-3">
+            <!-- Biomarker 1 -->
+            <div class="biomarker-card">
+              <div class="biomarker-header">
+                <span class="biomarker-title">Fasting Insulin</span>
+                <span class="biomarker-tag optimal">Optimal</span>
+              </div>
+              <div class="biomarker-val-row">
+                <span class="biomarker-val">6.2</span>
+                <span class="biomarker-unit">μIU/mL (Target: 4.0 - 8.0)</span>
+              </div>
+              <div class="biomarker-range-bar">
+                <div class="biomarker-range-fill" style="width: 55%; background: var(--dash-success);"></div>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--dash-text-muted); margin: 6px 0 0;">Patient: Sarah Jenkins • Reviewed by Dr. Emily Carter</p>
+            </div>
+
+            <!-- Biomarker 2 -->
+            <div class="biomarker-card">
+              <div class="biomarker-header">
+                <span class="biomarker-title">hs-CRP Inflammation</span>
+                <span class="biomarker-tag optimal">Optimal Low</span>
+              </div>
+              <div class="biomarker-val-row">
+                <span class="biomarker-val">0.68</span>
+                <span class="biomarker-unit">mg/L (Target: &lt; 1.0)</span>
+              </div>
+              <div class="biomarker-range-bar">
+                <div class="biomarker-range-fill" style="width: 35%; background: var(--dash-primary);"></div>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--dash-text-muted); margin: 6px 0 0;">Patient: David Miller • Down from 2.1 mg/L baseline</p>
+            </div>
+
+            <!-- Biomarker 3 -->
+            <div class="biomarker-card">
+              <div class="biomarker-header">
+                <span class="biomarker-title">Zonulin Gut Permeability</span>
+                <span class="biomarker-tag attention">Needs Action</span>
+              </div>
+              <div class="biomarker-val-row">
+                <span class="biomarker-val">48.4</span>
+                <span class="biomarker-unit">ng/mL (Target: &lt; 38.0)</span>
+              </div>
+              <div class="biomarker-range-bar">
+                <div class="biomarker-range-fill" style="width: 78%; background: var(--dash-warning);"></div>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--dash-text-muted); margin: 6px 0 0;">Patient: Jessica Hayes • Prescribed L-Glutamine protocol</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Therapeutic Protocols -->
+        <section id="diet-protocols" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Therapeutic Nutrition Protocols</h2>
+              <p>Standardized clinical dietary interventions utilized across outpatient programs</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">+ Add New Protocol</button>
+          </div>
+
+          <div class="dash-grid-3">
+            <div class="dash-card">
+              <span class="meal-badge">Gastrointestinal</span>
+              <h5 style="margin: 0 0 6px; font-size: 1.1rem; color: var(--dash-text-dark);">FODMAP Two-Phase Elimination</h5>
+              <p style="font-size: 0.84rem; color: var(--dash-text-muted); margin-bottom: 12px;">Addresses IBS, bloating, and small intestinal bacterial overgrowth.</p>
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--dash-primary);">284 Patients Enrolled</div>
+            </div>
+
+            <div class="dash-card">
+              <span class="meal-badge">Endocrinology</span>
+              <h5 style="margin: 0 0 6px; font-size: 1.1rem; color: var(--dash-text-dark);">Glycemic Index Carb Stabilization</h5>
+              <p style="font-size: 0.84rem; color: var(--dash-text-muted); margin-bottom: 12px;">Stabilizes post-prandial glucose excursions in Type 2 & Pre-diabetes.</p>
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--dash-primary);">512 Patients Enrolled</div>
+            </div>
+
+            <div class="dash-card">
+              <span class="meal-badge">Immunology</span>
+              <h5 style="margin: 0 0 6px; font-size: 1.1rem; color: var(--dash-text-dark);">Mediterranean Anti-Inflammatory</h5>
+              <p style="font-size: 0.84rem; color: var(--dash-text-muted); margin-bottom: 12px;">High polyphenol, rich in omega-3 fatty acids for arterial wellness.</p>
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--dash-primary);">686 Patients Enrolled</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Clinical Dispensary -->
+        <section id="supplement-inventory" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Clinical Dispensary & Supplement Orders</h2>
+              <p>Pharmaceutical-grade nutraceutical inventory & batch dispensing tracking</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">+ Reorder Stock</button>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Product & Brand</th>
+                    <th>Dosage & Form</th>
+                    <th>Remaining Stock</th>
+                    <th>Prescriptions Dispatched</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Supercritical Omega-3 EPA/DHA</strong></td>
+                    <td>1,200mg Softgels (60ct)</td>
+                    <td>148 Bottles</td>
+                    <td>42 this week</td>
+                    <td><span class="status-badge confirmed">In Stock</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">Dispense</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Liposomal Berberine HCl Complex</strong></td>
+                    <td>500mg Veg Caps (90ct)</td>
+                    <td>34 Bottles</td>
+                    <td>68 this week</td>
+                    <td><span class="status-badge pending">Reorder Soon</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">Reorder</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Spore Probiotic & Prebiotic Blend</strong></td>
+                    <td>50 Billion CFU (30ct)</td>
+                    <td>92 Bottles</td>
+                    <td>31 this week</td>
+                    <td><span class="status-badge confirmed">In Stock</span></td>
+                    <td><button class="action-btn-sm" onclick="window.location.href='404.html';">Dispense</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Billing & Superbills -->
+        <section id="revenue" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Billing, Claims & Insurance Superbills</h2>
+              <p>Medical Nutrition Therapy (MNT) CPT billing codes & insurance reimbursements</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Batch Generate Superbills</button>
+          </div>
+
+          <div class="dash-grid-2">
+            <div class="superbill-card">
+              <div class="superbill-info">
+                <h5>CPT 97802 - Initial Clinical MNT Assessment</h5>
+                <p>34 Claims Submitted • Aetna, BCBS, UnitedHealthcare • 96.2% Accepted</p>
+                <div style="font-size: 0.95rem; font-weight: 800; color: var(--dash-primary); margin-top: 6px;">$12,450 Reimbursed this month</div>
+              </div>
+              <button class="action-btn-sm" onclick="window.location.href='404.html';">Review Claims</button>
+            </div>
+
+            <div class="superbill-card">
+              <div class="superbill-info">
+                <h5>CPT 97803 - MNT Re-assessment & Follow-up</h5>
+                <p>112 Claims Submitted • Medicare Part B, Cigna • 94.8% Accepted</p>
+                <div style="font-size: 0.95rem; font-weight: 800; color: var(--dash-primary); margin-top: 6px;">$24,800 Reimbursed this month</div>
+              </div>
+              <button class="action-btn-sm" onclick="window.location.href='404.html';">Review Claims</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Clinic Locations & Rooms -->
+        <section id="clinic-branches" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Clinic Locations & Rooms</h2>
+              <p>Physical medical facilities and active consultation suites</p>
+            </div>
+          </div>
+
+          <div class="dash-grid-3">
+            <div class="dash-card">
+              <h5 style="margin: 0 0 4px; font-size: 1rem; color: var(--dash-text-dark);">Boston Central Medical Hub</h5>
+              <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 8px;">Suite 400, 100 Boylston St, Boston, MA</p>
+              <div style="font-size: 0.8rem; color: var(--dash-primary); font-weight: 700;">6 In-Person Rooms • 100% Operational</div>
+            </div>
+
+            <div class="dash-card">
+              <h5 style="margin: 0 0 4px; font-size: 1rem; color: var(--dash-text-dark);">Cambridge Outpatient Suites</h5>
+              <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 8px;">Building B, Kendall Square, Cambridge, MA</p>
+              <div style="font-size: 0.8rem; color: var(--dash-primary); font-weight: 700;">4 In-Person Rooms • 100% Operational</div>
+            </div>
+
+            <div class="dash-card">
+              <h5 style="margin: 0 0 4px; font-size: 1rem; color: var(--dash-text-dark);">Stackly Telehealth Data Cloud</h5>
+              <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 8px;">HIPAA Tier 4 Encrypted Servers</p>
+              <div style="font-size: 0.8rem; color: var(--dash-success); font-weight: 700;">99.99% Uptime • Zero Latency</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: HIPAA Compliance & Audit -->
+        <section id="audit-compliance" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>HIPAA Security & Access Audit Log</h2>
+              <p>Cryptographically verified access history to protected health information (PHI)</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Generate Compliance Log</button>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Timestamp</th>
+                    <th>Practitioner</th>
+                    <th>Target Record</th>
+                    <th>Action Taken</th>
+                    <th>IP & Facility</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Today, 10:28 AM</td>
+                    <td>Dr. Emily Carter (RDN)</td>
+                    <td>Sarah Jenkins (PID-8942)</td>
+                    <td>Accessed Blood Pathology</td>
+                    <td>192.168.1.42 • Boston Hub</td>
+                    <td><span class="status-badge confirmed">Encrypted Access</span></td>
+                  </tr>
+                  <tr>
+                    <td>Today, 09:15 AM</td>
+                    <td>Dr. Daniel Carter (MD)</td>
+                    <td>David Miller (PID-8943)</td>
+                    <td>Updated Superbill ICD-10</td>
+                    <td>192.168.1.18 • Boston Hub</td>
+                    <td><span class="status-badge confirmed">Encrypted Access</span></td>
+                  </tr>
+                  <tr>
+                    <td>Yesterday, 04:45 PM</td>
+                    <td>Emma Wilson (RDN)</td>
+                    <td>Jessica Hayes (PID-8944)</td>
+                    <td>Intake Questionnaire Saved</td>
+                    <td>10.0.4.12 • Telehealth VPN</td>
+                    <td><span class="status-badge confirmed">Encrypted Access</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

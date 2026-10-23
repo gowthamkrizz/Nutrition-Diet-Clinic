@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Nutrition Shop & Medical Formulas — Stackly Wellness</title>
+  <meta name="description" content="Shop board-certified clinical nutrition formulas, synbiotics, wild omega-3s, and pharmaceutical-grade micronutrients engineered by Stackly medical dietitians.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="icon" type="image/webp" href="assets/images/stackly-logo.webp">
+</head>
+<body>
+
+  <!-- ===================================================================
+       SECTION 1: SITE HEADER & NAVIGATION
+  =================================================================== -->
+  <header class="site-header">
+    <nav class="hero-navbar-inner">
+      <!-- Stackly Brand Logo -->
+      <a href="index.html" class="hero-brand-logo">
+        <img src="assets/images/stackly-logo-white.webp" alt="Stackly Logo" width="140" height="48">
+      </a>
+
+      <!-- Center Navigation Links -->
+      <ul class="hero-nav-menu">
+        <li><a href="index.html" class="hero-nav-link">HOME</a></li>
+        <li><a href="about.html" class="hero-nav-link">ABOUT</a></li>
+        <li><a href="services.html" class="hero-nav-link">SERVICES</a></li>
+        <li><a href="project.html" class="hero-nav-link">PROJECTS</a></li>
+        <li class="active"><a href="shop.html" class="hero-nav-link">SHOP</a></li>
+        <li><a href="blog.html" class="hero-nav-link">BLOG</a></li>
+        <li><a href="contact.html" class="hero-nav-link">CONTACT</a></li>
+        <li><a href="pages.html" class="hero-nav-link">PAGES</a></li>
+      </ul>
+
+      <!-- Right Header Actions (Cart, Get Started, Mobile Toggle) -->
+      <div class="hero-nav-actions">
+        <!-- Interactive Cart Trigger Button -->
+        <a href="#cart" class="header-cart-btn js-cart-trigger" aria-label="View Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge-count">0</span>
+        </a>
+
+        <a href="login.html" class="btn-style2 hero-btn-get-started" aria-label="Sign In or Get Started">
+          <span class="theme-btn-arrow-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+          </span>
+          <span class="theme-btn">Get Started</span>
+          <span class="theme-btn-arrow-right">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+          </span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="mobile-menu-toggle js-mobile-toggle" aria-label="Open Navigation Menu" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Offcanvas Slide Drawer Panel -->
+  <div class="offcanvas-overlay"></div>
+  <aside class="offcanvas-panel">
+    <div class="offcanvas-header">
+      <img src="assets/images/stackly-logo.webp" alt="Stackly" width="130" height="44">
+      <button class="offcanvas-close" aria-label="Close Panel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+    </div>
+    <div class="offcanvas-body">
+      <h4 style="margin-bottom: 12px;">Clinical Nutrition Store</h4>
+      <p class="offcanvas-about">Pharmaceutical-grade nutraceuticals, verified synbiotics, and bioavailable mineral complexes formulated strictly on peer-reviewed clinical trials.</p>
+      <div class="offcanvas-contact-list">
+        <div class="offcanvas-contact-item">
+          <div class="offcanvas-contact-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg></div>
+          <div class="offcanvas-contact-text"><h6>Pharmacy Helpdesk</h6><p>+91 90909 09090</p></div>
+        </div>
+        <div class="offcanvas-contact-item">
+          <div class="offcanvas-contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div class="offcanvas-contact-text"><h6>Order Support</h6><p>info@stackly.com</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <a href="404.html" class="btn-style2 btn-teal" style="width: 100%; justify-content: center;">
+        <span class="theme-btn">Book Consultation</span>
+        <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html">
+          <img src="assets/images/stackly-logo-white.webp" alt="Stackly" width="130" height="42">
+        </a>
+        <button class="mobile-drawer-close js-mobile-close" aria-label="Close Navigation Menu" type="button">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html"><span>Home</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="about.html"><span>About Us</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="services.html"><span>Services</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="project.html"><span>Case Studies / Projects</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item active"><a href="shop.html"><span>Shop / Products</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="blog.html"><span>Scientific Blog</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="contact.html"><span>Contact Us</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="pages.html"><span>Pages & Tools</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn-style2" style="width: 100%; justify-content: center;">
+        <span class="theme-btn">Patient Portal Login</span>
+        <span class="theme-btn-arrow-right"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+      </a>
+      <div class="mobile-drawer-contact-strip">
+        <a href="tel:+919090909090" class="mobile-drawer-contact-item">
+          <span class="material-symbols-outlined">call</span>
+          <span>+91 90909 09090</span>
+        </a>
+        <a href="mailto:info@stackly.com" class="mobile-drawer-contact-item">
+          <span class="material-symbols-outlined">mail</span>
+          <span>info@stackly.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================
+       SECTION 2: PAGE TITLE BANNER (Breadcrumb Hero)
+  =================================================================== -->
+  <section class="page-title-banner">
+    <div class="container">
+      <h1>Clinical Nutrition Shop & Medical Formulas</h1>
+      <div class="breadcrumb-trail">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Shop & Products</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 3: SHOP DIRECTORY & PRODUCTS CATALOG
+  =================================================================== -->
+  <section class="section" style="padding-top: 50px;">
+    <div class="container">
+      <div class="section-title-wrap text-center reveal-fade">
+        <span class="sub-title sub-title-gold">CLINICALLY FORMULATED</span>
+        <h2 class="main-title">Pharmaceutical-Grade Dietary Supplements</h2>
+        <p class="section-desc">Every batch is third-party lab tested, verified for bio-potency, and calibrated to restore human cellular metabolic health.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-wrapper reveal-fade" data-target-cards=".product-card">
+        <button class="filter-tab-btn active" data-filter="all">
+          <span><span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px;">auto_awesome</span> All Formulas</span> <span class="tab-count">8</span>
+        </button>
+        <button class="filter-tab-btn" data-filter="gut">
+          <span><span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px;">biotech</span> Gut Microbiome</span> <span class="tab-count">2</span>
+        </button>
+        <button class="filter-tab-btn" data-filter="metabolic">
+          <span><span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px;">monitor_heart</span> Metabolic & Heart</span> <span class="tab-count">2</span>
+        </button>
+        <button class="filter-tab-btn" data-filter="micronutrients">
+          <span><span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px;">bedtime</span> Sleep & Minerals</span> <span class="tab-count">2</span>
+        </button>
+        <button class="filter-tab-btn" data-filter="athletic">
+          <span><span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px;">bolt</span> Athletic Recovery</span> <span class="tab-count">2</span>
+        </button>
+      </div>
+
+      <!-- Product Grid (8 Items) -->
+      <div class="shop-grid">
+        <!-- Product 1 -->
+        <div class="product-card filterable-card reveal-stagger" data-category="gut">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/service-1.webp" alt="Clinical Multi-Strain Synbiotic" loading="lazy">
+            <span class="product-badge-tag">Best Seller</span>
+            <button class="product-wishlist-btn" data-id="synbiotic" aria-label="Add to Wishlist" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category-meta">Gut Microbiome</span>
+            <h3 class="product-title">Clinical Multi-Strain Synbiotic (60B CFU)</h3>
+            <div class="product-rating-row">
+              <div class="product-rating-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span class="product-review-count">(142)</span>
+            </div>
+            <p class="product-desc">Dual-layer gastro-resistant prebiotic + 14-strain clinically-studied probiotic designed to eliminate digestive distress.</p>
+            <div class="product-price-row">
+              <span class="product-price">$48.00</span>
+              <span class="product-unit">60 Capsules</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn-add-cart" data-id="synbiotic" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
+                <span>Add to Cart</span>
+              </button>
+              <button class="btn-view-details" data-id="synbiotic" type="button">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card filterable-card reveal-stagger" data-category="metabolic">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/service-2.webp" alt="Wild Arctic Ultra Omega-3" loading="lazy">
+            <span class="product-badge-tag">Clinical Grade</span>
+            <button class="product-wishlist-btn" data-id="omega3" aria-label="Add to Wishlist" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category-meta">Metabolic Health</span>
+            <h3 class="product-title">Wild Arctic Ultra Omega-3 (2,400mg)</h3>
+            <div class="product-rating-row">
+              <div class="product-rating-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span class="product-review-count">(98)</span>
+            </div>
+            <p class="product-desc">Ultra-pure triglyceride-form wild cod liver oil formulated for cardiovascular lipid optimization and inflammation relief.</p>
+            <div class="product-price-row">
+              <span class="product-price">$54.00</span>
+              <span class="product-unit">120 Softgels</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn-add-cart" data-id="omega3" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
+                <span>Add to Cart</span>
+              </button>
+              <button class="btn-view-details" data-id="omega3" type="button">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card filterable-card reveal-stagger" data-category="micronutrients">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/service-3.webp" alt="Bioavailable Magnesium Glycinate" loading="lazy">
+            <span class="product-badge-tag">Sleep & Cortisol</span>
+            <button class="product-wishlist-btn" data-id="magnesium" aria-label="Add to Wishlist" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category-meta">Sleep & Minerals</span>
+            <h3 class="product-title">Magnesium Glycinate Complex (400mg)</h3>
+            <div class="product-rating-row">
+              <div class="product-rating-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span class="product-review-count">(215)</span>
+            </div>
+            <p class="product-desc">Dual chelate crossing the blood-brain barrier for restorative deep sleep, cortisol downregulation, and calm.</p>
+            <div class="product-price-row">
+              <span class="product-price">$36.00</span>
+              <span class="product-unit">90 Vegetarian Caps</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn-add-cart" data-id="magnesium" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
+                <span>Add to Cart</span>
+              </button>
+              <button class="btn-view-details" data-id="magnesium" type="button">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card filterable-card reveal-stagger" data-category="athletic">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/service-4.webp" alt="Hydrolyzed Native Whey Isolate" loading="lazy">
+            <span class="product-badge-tag">Muscle Recovery</span>
+            <button class="product-wishlist-btn" data-id="whey-isolate" aria-label="Add to Wishlist" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category-meta">Athletic Recovery</span>
+            <h3 class="product-title">Native Grass-Fed Whey Isolate (27g)</h3>
+            <div class="product-rating-row">
+              <div class="product-rating-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span class="product-review-count">(84)</span>
+            </div>
+            <p class="product-desc">Zero lactose, micro-filtered cold process whey with 27g protein and 6.2g BCAAs per scoop to support lean mass.</p>
+            <div class="product-price-row">
+              <span class="product-price">$62.00</span>
+              <span class="product-unit">2 lbs / 30 Servings</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn-add-cart" data-id="whey-isolate" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
+                <span>Add to Cart</span>
+              </button>
+              <button class="btn-view-details" data-id="whey-isolate" type="button">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card filterable-card reveal-stagger" data-category="micronutrients">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/about-nutrition.webp" alt="Liposomal Vitamin D3 + K2" loading="lazy">
+            <span class="product-badge-tag">Immune Shield</span>
+            <button class="product-wishlist-btn" data-id="vitamin-d3k2" aria-label="Add to Wishlist" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category-meta">Sleep & Minerals</span>
+            <h3 class="product-title">Liposomal Vitamin D3 + K2 (MK-7)</h3>
+            <div class="product-rating-row">
+              <div class="product-rating-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span class="product-review-count">(112)</span>
+            </div>
+            <p class="product-desc">Fast-absorbing liposomal liquid emulsion delivering 5,000 IU D3 synergized with bio-active Menaquinone-7.</p>
+            <div class="product-price-row">
+              <span class="product-price">$29.00</span>
+              <span class="product-unit">60 ml / 60 Servings</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn-add-cart" data-id="vitamin-d3k2" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
+                <span>Add to Cart</span>
+              </button>
+              <button class="btn-view-details" data-id="vitamin-d3k2" type="button">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card filterable-card reveal-stagger" data-category="metabolic">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/blog-1.webp" alt="Metabolic Berberine Phytosome" loading="lazy">
+            <span class="product-badge-tag">Glycemic Control</span>
+            <button class="product-wishlist-btn" data-id="berberine" aria-label="Add to Wishlist" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category-meta">Metabolic Health</span>
+            <h3 class="product-title">Berberine Phytosome (500mg)</h3>
+            <div class="product-rating-row">
+              <div class="product-rating-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span class="product-review-count">(176)</span>
+            </div>
+            <p class="product-desc">Enhanced phospholipids with 9.6x greater absorption than raw berberine for healthy post-meal glucose buffering.</p>
+            <div class="product-price-row">
+              <span class="product-price">$42.00</span>
+              <span class="product-unit">60 Capsules</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn-add-cart" data-id="berberine" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
+                <span>Add to Cart</span>
+              </button>
+              <button class="btn-view-details" data-id="berberine" type="button">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card filterable-card reveal-stagger" data-category="gut">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/blog-2.webp" alt="Organic Prebiotic Polyphenol Powder" loading="lazy">
+            <span class="product-badge-tag">Fermentation Fuel</span>
+            <button class="product-wishlist-btn" data-id="prebiotic-fiber" aria-label="Add to Wishlist" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category-meta">Gut Microbiome</span>
+            <h3 class="product-title">Prebiotic Polyphenol Matrix Powder</h3>
+            <div class="product-rating-row">
+              <div class="product-rating-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span class="product-review-count">(67)</span>
+            </div>
+            <p class="product-desc">Pomegranate, wild blueberry, acacia, and green tea catechins specifically calibrated to feed beneficial microflora.</p>
+            <div class="product-price-row">
+              <span class="product-price">$39.00</span>
+              <span class="product-unit">300g / 30 Scoops</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn-add-cart" data-id="prebiotic-fiber" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
+                <span>Add to Cart</span>
+              </button>
+              <button class="btn-view-details" data-id="prebiotic-fiber" type="button">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card filterable-card reveal-stagger" data-category="athletic">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/blog-3.webp" alt="Electrolyte Hydration Matrix" loading="lazy">
+            <span class="product-badge-tag">Peak Cellular</span>
+            <button class="product-wishlist-btn" data-id="electrolytes" aria-label="Add to Wishlist" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="product-body">
+            <span class="product-category-meta">Athletic Recovery</span>
+            <h3 class="product-title">Electrolyte Hydration Matrix (Zero Sugar)</h3>
+            <div class="product-rating-row">
+              <div class="product-rating-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span class="product-review-count">(129)</span>
+            </div>
+            <p class="product-desc">Optimal 1,000mg sodium, 200mg potassium, 60mg magnesium balance without maltodextrin, artificial dyes, or sugar.</p>
+            <div class="product-price-row">
+              <span class="product-price">$32.00</span>
+              <span class="product-unit">30 Stick Packs</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn-add-cart" data-id="electrolytes" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
+                <span>Add to Cart</span>
+              </button>
+              <button class="btn-view-details" data-id="electrolytes" type="button">Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 4: CLINICAL ADVICE CTA
+  =================================================================== -->
+  <section class="section bg-light-mint" style="padding: 70px 0;">
+    <div class="container text-center">
+      <div style="max-width: 680px; margin: 0 auto;">
+        <span class="badge-pill pill-teal" style="margin-bottom: 16px; display: inline-block;">PERSONALIZED PRESCRIPTION</span>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--theme-color2); margin-bottom: 14px;">Not sure which formula matches your biomarkers?</h2>
+        <p style="font-size: 1.05rem; color: var(--theme-text); line-height: 1.6; margin-bottom: 28px;">Our registered dietitians review your complete lab telemetry and design a targeted nutrient stack tailored to your exact metabolic needs.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="404.html" class="btn-style2 btn-teal" style="height: 52px; line-height: 52px; padding: 0 32px;">
+            <span class="theme-btn">Book Lab Review & Consultation</span>
+            <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+          </a>
+          <a href="404.html" class="btn-style2" style="height: 52px; line-height: 52px; padding: 0 28px; background: #fff; color: var(--theme-color2); border: 1px solid rgba(1,62,62,0.2);">
+            <span class="theme-btn">Explore Therapy Programs</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 5: NEWSLETTER BANNER & GLOBAL FOOTER
+  =================================================================== -->
+  <section class="section bg-light-mint" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="newsletter-banner">
+        <div class="newsletter-info">
+          <h3>Subscribe to Our Newsletter</h3>
+          <p>Receive weekly science-backed diet plans, healthy recipes, and expert advice.</p>
+        </div>
+        <div class="newsletter-form-wrapper">
+          <form class="newsletter-form" novalidate>
+            <input type="email" placeholder="Enter your email address..." required aria-label="Email address for newsletter">
+            <button type="submit">Subscribe</button>
+          </form>
+          <span class="newsletter-notice">Zero spam. We respect your medical privacy & inbox.</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand"><img src="assets/images/stackly-logo-white.webp" alt="Stackly Logo" width="140" height="48"></div>
+            <p class="footer-bio">Stackly delivers clinical nutrition therapy, personalized metabolic meal plans, and ongoing dietitian support for lifelong health and wellness.</p>
+            <div class="footer-socials">
+              <a href="404.html" class="footer-social-btn" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="404.html" class="footer-social-btn" aria-label="Twitter"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z"/></svg></a>
+              <a href="404.html" class="footer-social-btn" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-widget">
+            <h5>Navigation</h5>
+            <ul class="footer-links-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Clinical Services</a></li>
+              <li><a href="project.html">Case Studies & Projects</a></li>
+              <li><a href="shop.html">Shop Formulas</a></li>
+              <li><a href="blog.html">Scientific Blog</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="pages.html">Pages Directory</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h5>Specializations</h5>
+            <ul class="footer-links-list">
+              <li><a href="services.html">Clinical Nutrition</a></li>
+              <li><a href="services.html">Family Nutrition</a></li>
+              <li><a href="services.html">Medical Nutrition</a></li>
+              <li><a href="services.html">Senior Dietary Care</a></li>
+              <li><a href="services.html">Metabolic Diet Planning</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h5>Get in Touch</h5>
+            <div class="footer-contact-info">
+              <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg><span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span></div>
+              <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg><a href="tel:+919090909090">+91 90909 09090</a></div>
+              <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:info@stackly.com">info@stackly.com</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© Copyright 2026 by Stackly Nutrition. All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="services.html">Terms & Conditions</a>
+            <a href="contact.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 6: CART SLIDE-OUT DRAWER
+  =================================================================== -->
+  <div class="cart-drawer-overlay"></div>
+  <aside id="cart" class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title-wrap">
+        <h3 class="cart-drawer-title">Nutrition Cart</h3>
+        <span class="cart-drawer-count">0</span>
+      </div>
+      <button class="cart-drawer-close" aria-label="Close Shopping Cart">&times;</button>
+    </div>
+
+    <!-- Scrollable Items Container -->
+    <div class="cart-drawer-body">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Footer with Totals and Action Buttons -->
+    <div class="cart-drawer-footer">
+      <div class="free-shipping-progress">
+        <div class="free-shipping-bar" id="cartFreeShippingBar" style="width: 0%;"></div>
+      </div>
+      <div id="cartFreeShippingNote" style="font-size: 0.8rem; color: #4a5568; margin-bottom: 12px; text-align: center;"></div>
+
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span id="cartSubtotalAmount">$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Clinic Delivery</span>
+        <span id="cartShippingAmount">$5.99</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Estimated Total</span>
+        <span id="cartTotalAmount">$0.00</span>
+      </div>
+
+      <div class="cart-footer-actions">
+        <button type="button" class="btn-style2 btn-teal js-checkout-btn" style="width: 100%; justify-content: center; height: 50px; line-height: 50px;">
+          <span class="theme-btn">Proceed to Checkout</span>
+          <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+        </button>
+        <button type="button" class="btn-style2 js-close-cart-btn" style="width: 100%; justify-content: center; height: 44px; line-height: 44px; background: transparent; color: var(--theme-color2); border: 1px solid #cbd5e0;">
+          <span class="theme-btn">Continue Shopping</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================
+       SECTION 7: PRODUCT DETAILS MODAL
+  =================================================================== -->
+  <div class="product-modal-overlay">
+    <div class="product-modal" id="productDetailsModal">
+      <div class="product-modal-header">
+        <span class="badge-pill pill-teal" id="modalProductCategory">Gut Health</span>
+        <button class="product-modal-close" aria-label="Close Details Modal">&times;</button>
+      </div>
+      <div class="product-modal-body">
+        <div class="product-modal-grid">
+          <div>
+            <img src="assets/images/service-1.webp" alt="Product" id="modalProductImg" class="product-modal-img">
+            <span class="badge-pill pill-gold" id="modalProductBadge" style="display: block; text-align: center; margin-top: 10px;">Best Seller</span>
+          </div>
+          <div>
+            <h3 id="modalProductTitle" style="font-size: 1.35rem; font-weight: 800; color: var(--theme-color2); margin-bottom: 8px;">Product Title</h3>
+            <div class="product-rating-row">
+              <div class="product-rating-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <span id="modalProductRatingCount" style="font-size: 0.85rem; color: #718096;">(142 reviews)</span>
+            </div>
+            <div id="modalProductPrice" style="font-size: 1.6rem; font-weight: 800; color: var(--theme-color2); margin-bottom: 14px;">$48.00</div>
+            <p id="modalProductDesc" style="font-size: 0.92rem; color: var(--theme-text); line-height: 1.6; margin-bottom: 16px;">Product full scientific description.</p>
+
+            <h5 style="font-size: 0.95rem; font-weight: 700; color: var(--theme-color2); margin-bottom: 8px;">Clinical Specifications</h5>
+            <ul class="product-spec-list" id="modalProductSpecs">
+              <!-- Dynamically populated -->
+            </ul>
+
+            <div style="margin-top: 24px;">
+              <button type="button" class="btn-style2 btn-teal" id="modalAddToCartBtn" style="width: 100%; justify-content: center; height: 48px; line-height: 48px;">
+                <span class="theme-btn">Add to Cart</span>
+                <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SECTION 8: CHECKOUT MODAL
+  =================================================================== -->
+  <div class="checkout-modal-overlay">
+    <div class="checkout-modal" id="checkoutModal">
+      <div class="checkout-modal-header">
+        <h3 class="checkout-modal-title">Secure Medical Checkout</h3>
+        <button class="checkout-modal-close" aria-label="Close Checkout">&times;</button>
+      </div>
+
+      <!-- Checkout Form View -->
+      <div class="checkout-modal-body" id="checkoutFormView">
+        <form id="checkoutOrderForm" novalidate>
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--theme-color2); margin-bottom: 14px;">1. Patient & Delivery Information</h4>
+          
+          <div class="checkout-form-grid">
+            <div class="checkout-form-group">
+              <label class="checkout-label" for="checkoutName">Full Name *</label>
+              <input type="text" id="checkoutName" class="checkout-input" placeholder="Anand Kumar" required>
+            </div>
+            <div class="checkout-form-group">
+              <label class="checkout-label" for="checkoutEmail">Email Address *</label>
+              <input type="email" id="checkoutEmail" class="checkout-input" placeholder="anand@company.com" required>
+            </div>
+            <div class="checkout-form-group">
+              <label class="checkout-label" for="checkoutPhone">Phone Number *</label>
+              <input type="tel" id="checkoutPhone" class="checkout-input" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="checkout-form-group">
+              <label class="checkout-label" for="checkoutCity">City *</label>
+              <input type="text" id="checkoutCity" class="checkout-input" placeholder="Salem" required>
+            </div>
+            <div class="checkout-form-group full-width">
+              <label class="checkout-label" for="checkoutAddress">Street Address / Clinic Delivery Location *</label>
+              <input type="text" id="checkoutAddress" class="checkout-input" placeholder="Door No, Street Name, Landmark" required>
+            </div>
+            <div class="checkout-form-group">
+              <label class="checkout-label" for="checkoutZip">Postal Code *</label>
+              <input type="text" id="checkoutZip" class="checkout-input" placeholder="636 003" required>
+            </div>
+          </div>
+
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--theme-color2); margin: 24px 0 12px;">2. Payment Method</h4>
+          <div class="payment-selector-group">
+            <label class="payment-method-card is-selected">
+              <input type="radio" name="paymentMethod" value="card" checked>
+              <div>
+                <strong style="display: block; font-size: 0.9rem;">Credit / Debit Card</strong>
+                <span style="font-size: 0.78rem; color: #718096;">Encrypted 256-bit checkout</span>
+              </div>
+            </label>
+            <label class="payment-method-card">
+              <input type="radio" name="paymentMethod" value="cod">
+              <div>
+                <strong style="display: block; font-size: 0.9rem;">Clinic Pay / COD</strong>
+                <span style="font-size: 0.78rem; color: #718096;">Pay at clinic pickup</span>
+              </div>
+            </label>
+          </div>
+
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--theme-color2); margin: 24px 0 12px;">3. Order Review</h4>
+          <div id="checkoutSummaryItems" style="background: #fbfdfc; border: 1px solid #edf2f7; border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;">
+            <!-- Injected via JavaScript -->
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.9rem; color: #4a5568;">
+            <span>Subtotal:</span>
+            <span id="checkoutSubtotal">$0.00</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.9rem; color: #4a5568;">
+            <span>Clinic Shipping:</span>
+            <span id="checkoutShipping">$0.00</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 800; color: var(--theme-color2); margin-top: 10px; padding-top: 10px; border-top: 1px dashed #cbd5e0;">
+            <span>Total:</span>
+            <span id="checkoutTotal">$0.00</span>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <button type="submit" class="btn-style2 btn-teal" style="width: 100%; justify-content: center; height: 50px; line-height: 50px;">
+              <span class="theme-btn">Place Secure Order</span>
+              <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Order Confirmation Receipt Screen -->
+      <div class="checkout-modal-body" id="checkoutSuccessView" style="display: none;">
+        <div class="order-success-screen">
+          <div class="order-success-check">
+            <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+          </div>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--theme-color2); margin-bottom: 8px;">Order Confirmed!</h3>
+          <p style="font-size: 0.95rem; color: var(--theme-text); line-height: 1.6;">Thank you for your clinical formula order. We have prepared your batch and emailed your dispatch tracking details.</p>
+
+          <div class="order-receipt-box" id="orderReceiptBox">
+            <!-- Injected via JavaScript -->
+          </div>
+
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn-style2 btn-teal js-close-checkout-btn" onclick="document.querySelector('.checkout-modal-overlay').classList.remove('is-active'); document.body.style.overflow='';" style="height: 48px; line-height: 48px; padding: 0 24px;">
+              <span class="theme-btn">Continue Shopping</span>
+            </button>
+            <a href="index.html" class="btn-style2" style="height: 48px; line-height: 48px; padding: 0 24px; background: transparent; color: var(--theme-color2); border: 1px solid #cbd5e0;">
+              <span class="theme-btn">Back to Home</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

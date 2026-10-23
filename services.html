@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Clinical Nutrition Services – Stackly</title>
+  <meta name="description" content="Explore Stackly's clinical nutrition services including medical nutrition therapy, pediatric diets, senior wellness, and metabolic meal planning.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="icon" type="image/webp" href="assets/images/stackly-logo.webp">
+</head>
+<body>
+
+  <!-- ===================================================================
+       SECTION 1: TOP BAR & SITE HEADER
+  =================================================================== -->
+  <!-- Top Navigation Header (Same like Home Page Header) -->
+  <header class="site-header">
+    <nav class="hero-navbar-inner">
+      <!-- Stackly Brand Logo -->
+      <a href="index.html" class="hero-brand-logo">
+        <img src="assets/images/stackly-logo-white.webp" alt="Stackly Logo" width="140" height="48">
+      </a>
+
+      <!-- Center Navigation Links -->
+      <ul class="hero-nav-menu">
+        <li><a href="index.html" class="hero-nav-link">HOME</a></li>
+        <li><a href="about.html" class="hero-nav-link">ABOUT</a></li>
+        <li class="active"><a href="services.html" class="hero-nav-link">SERVICES</a></li>
+        <li><a href="project.html" class="hero-nav-link">PROJECTS</a></li>
+        <li><a href="shop.html" class="hero-nav-link">SHOP</a></li>
+        <li><a href="blog.html" class="hero-nav-link">BLOG</a></li>
+        <li><a href="contact.html" class="hero-nav-link">CONTACT</a></li>
+        <li><a href="pages.html" class="hero-nav-link">PAGES</a></li>
+      </ul>
+
+      <!-- Right Header Actions (Cart Button, Get Started Button & Mobile Menu Toggle) -->
+      <div class="hero-nav-actions">
+        <a href="shop.html" class="header-cart-btn js-cart-trigger" aria-label="View Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge-count">0</span>
+        </a>
+        <a href="login.html" class="btn-style2 hero-btn-get-started" aria-label="Get Started with Stackly">
+          <span class="theme-btn-arrow-left">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+          </span>
+          <span class="theme-btn">Get Started</span>
+          <span class="theme-btn-arrow-right">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+          </span>
+        </a>
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="mobile-menu-toggle js-mobile-toggle" aria-label="Open Navigation Menu" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Offcanvas Slide Drawer Panel -->
+  <div class="offcanvas-overlay"></div>
+  <aside class="offcanvas-panel">
+    <div class="offcanvas-header">
+      <img src="assets/images/stackly-logo.webp" alt="Stackly" width="130" height="44">
+      <button class="offcanvas-close" aria-label="Close Panel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+    </div>
+    <div class="offcanvas-body">
+      <h4 style="margin-bottom: 12px;">Clinical Services</h4>
+      <p class="offcanvas-about">Discover our specialized medical nutrition plans designed to target autoimmune, digestive, pediatric, and metabolic health.</p>
+      <div class="offcanvas-contact-list">
+        <div class="offcanvas-contact-item">
+          <div class="offcanvas-contact-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg></div>
+          <div class="offcanvas-contact-text"><h6>Direct Clinic Line</h6><p>+88 017 500 500 88</p></div>
+        </div>
+        <div class="offcanvas-contact-item">
+          <div class="offcanvas-contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div class="offcanvas-contact-text"><h6>Patient Intake Email</h6><p>support@stackly.com</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <a href="404.html" class="btn-style2 btn-teal" style="width: 100%; justify-content: center;">
+        <span class="theme-btn">Book Consultation</span>
+        <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html">
+          <img src="assets/images/stackly-logo-white.webp" alt="Stackly" width="130" height="42">
+        </a>
+        <button class="mobile-drawer-close js-mobile-close" aria-label="Close Navigation Menu" type="button">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html"><span>Home</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="about.html"><span>About Us</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item active"><a href="services.html"><span>Services</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="project.html"><span>Case Studies / Projects</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="shop.html"><span>Shop / Products</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="blog.html"><span>Scientific Blog</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="contact.html"><span>Contact Us</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="pages.html"><span>Pages & Tools</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn-style2" style="width: 100%; justify-content: center;">
+        <span class="theme-btn">Get Started</span>
+        <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+      </a>
+      <div class="mobile-drawer-contact-strip">
+        <a href="tel:+919090909090" class="mobile-drawer-contact-item">
+          <span class="material-symbols-outlined">call</span>
+          <span>+91 90909 09090</span>
+        </a>
+        <a href="mailto:info@stackly.com" class="mobile-drawer-contact-item">
+          <span class="material-symbols-outlined">mail</span>
+          <span>info@stackly.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-overlay modal-overlay"></div>
+  <div class="search-modal">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <h4 style="margin: 0;">Search Services</h4>
+      <button class="modal-close search-close"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+    </div>
+    <div class="search-input-wrap">
+      <input type="text" placeholder="Search medical, family, senior diet services...">
+      <button aria-label="Submit Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SECTION 2: PAGE TITLE BANNER (Breadcrumb Hero)
+  =================================================================== -->
+  <section class="page-title-banner">
+    <div class="container">
+      <h1>Specialized Nutrition & Diet Services</h1>
+      <div class="breadcrumb-trail">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 3: 6-SERVICE COMPREHENSIVE GRID (Interactive Filter Tabs)
+  =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap text-center reveal-fade">
+        <span class="sub-title sub-title-gold">COMPREHENSIVE CLINICAL CARE</span>
+        <h2 class="main-title">Precision nutrition solutions tailored to your health</h2>
+        <p class="section-desc">Experience our signature clinical domains, delivered with custom biomarker tracking, physician coordination, and continuous practitioner support.</p>
+      </div>
+
+      <!-- Interactive Service Filter Tabs -->
+      <div class="filter-tabs-wrapper reveal-fade" data-target-cards=".service-card-v2">
+        <button class="filter-tab-btn active" data-filter="all">
+          <span><span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px;">auto_awesome</span> All Clinical Services</span> <span class="tab-count">6</span>
+        </button>
+        <button class="filter-tab-btn" data-filter="medical">
+          <span><span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px;">medical_services</span> Medical & Metabolic</span> <span class="tab-count">2</span>
+        </button>
+        <button class="filter-tab-btn" data-filter="pediatric">
+          <span><span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px;">child_care</span> Pediatric & Family</span> <span class="tab-count">2</span>
+        </button>
+        <button class="filter-tab-btn" data-filter="performance">
+          <span><span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px;">bolt</span> Longevity & Performance</span> <span class="tab-count">2</span>
+        </button>
+      </div>
+
+      <div class="services-grid" style="grid-template-columns: repeat(3, 1fr); gap: 28px;">
+        <!-- Service 1 -->
+        <div class="service-card-v2 filterable-card reveal-stagger" data-category="medical">
+          <div class="service-img-wrap">
+            <img src="assets/images/service-1.webp" alt="Medical Nutrition Therapy" width="400" height="220">
+            <span class="badge-pill pill-teal service-badge-floating">Type 2 & Glycemic</span>
+          </div>
+          <div class="service-content-wrap">
+            <h4 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; color: var(--theme-text-dark);">Medical Nutrition Therapy</h4>
+            <p style="font-size: 0.9rem; color: var(--theme-text); line-height: 1.6; margin: 0;">Evidence-based therapeutic dietary interventions for pre-diabetes, hypertension, insulin resistance, kidney health, and lipid disorders.</p>
+            <ul class="service-outcomes-list">
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> HbA1c drop averaging -1.4% in 90 days</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Continuous CGM blood glucose telemetry</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Full laboratory review & MD coordination</li>
+            </ul>
+            <a href="404.html" class="service-link" style="margin-top: auto;">Consult Specialist <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card-v2 filterable-card reveal-stagger" data-category="pediatric">
+          <div class="service-img-wrap">
+            <img src="assets/images/service-2.webp" alt="Family Nutrition" width="400" height="220">
+            <span class="badge-pill pill-gold service-badge-floating">Childhood & Family</span>
+          </div>
+          <div class="service-content-wrap">
+            <h4 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; color: var(--theme-text-dark);">Family & Pediatric Nutrition</h4>
+            <p style="font-size: 0.9rem; color: var(--theme-text); line-height: 1.6; margin: 0;">Harmonious family meal frameworks, pediatric sensory picky eating resolution, and allergy-friendly household cooking schedules.</p>
+            <ul class="service-outcomes-list">
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Resolves mealtime sensory battles</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Full allergen-safe rotating household recipes</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Pediatric micronutrient density audit</li>
+            </ul>
+            <a href="404.html" class="service-link" style="margin-top: auto;">Consult Specialist <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card-v2 filterable-card reveal-stagger" data-category="performance">
+          <div class="service-img-wrap">
+            <img src="assets/images/service-3.webp" alt="Senior Nutrition" width="400" height="220">
+            <span class="badge-pill pill-emerald service-badge-floating">Vitality 55+</span>
+          </div>
+          <div class="service-content-wrap">
+            <h4 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; color: var(--theme-text-dark);">Senior Dietary Vitality</h4>
+            <p style="font-size: 0.9rem; color: var(--theme-text); line-height: 1.6; margin: 0;">Preventing muscle loss, optimizing bone mineral density, improving gastric absorption, and maintaining sharp cognitive function.</p>
+            <ul class="service-outcomes-list">
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> +8.4% Lean skeletal muscle preservation</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Anti-inflammatory joint support nutrition</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Neuro-protective Mediterranean fats</li>
+            </ul>
+            <a href="404.html" class="service-link" style="margin-top: auto;">Consult Specialist <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card-v2 filterable-card reveal-stagger" data-category="medical">
+          <div class="service-img-wrap">
+            <img src="assets/images/service-4.webp" alt="Clinical Nutrition" width="400" height="220">
+            <span class="badge-pill pill-purple service-badge-floating">Hormonal & IBD</span>
+          </div>
+          <div class="service-content-wrap">
+            <h4 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; color: var(--theme-text-dark);">Endocrine & Autoimmune Care</h4>
+            <p style="font-size: 0.9rem; color: var(--theme-text); line-height: 1.6; margin: 0;">Intensive therapeutic nutritional care for Hashimoto's, PCOS, inflammatory bowel disease (IBD), and gut dysbiosis.</p>
+            <ul class="service-outcomes-list">
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Autoimmune antibody down-regulation</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Phased gut mucosal barrier restoration</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Restores healthy hormonal cadence</li>
+            </ul>
+            <a href="404.html" class="service-link" style="margin-top: auto;">Consult Specialist <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card-v2 filterable-card reveal-stagger" data-category="pediatric">
+          <div class="service-img-wrap">
+            <img src="assets/images/service-5.webp" alt="Diet Planning" width="400" height="220">
+            <span class="badge-pill pill-gold service-badge-floating">Pantry Blueprint</span>
+          </div>
+          <div class="service-content-wrap">
+            <h4 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; color: var(--theme-text-dark);">Personalized Diet Planning</h4>
+            <p style="font-size: 0.9rem; color: var(--theme-text); line-height: 1.6; margin: 0;">Personalized weekly culinary roadmaps complete with grocery shopping lists, pantry staples, and macro splits.</p>
+            <ul class="service-outcomes-list">
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 90-minute weekly batch prep system</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Exact gram-accurate macronutrient splits</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Restaurant & travel dining strategies</li>
+            </ul>
+            <a href="404.html" class="service-link" style="margin-top: auto;">Consult Specialist <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card-v2 filterable-card reveal-stagger" data-category="performance">
+          <div class="service-img-wrap">
+            <img src="assets/images/service-6.webp" alt="Athletic Performance" width="400" height="220">
+            <span class="badge-pill pill-teal service-badge-floating">Power & Fuel</span>
+          </div>
+          <div class="service-content-wrap">
+            <h4 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; color: var(--theme-text-dark);">Athletic Peak & Recovery</h4>
+            <p style="font-size: 0.9rem; color: var(--theme-text); line-height: 1.6; margin: 0;">Strategic peri-workout nutrient timing, hydration osmolarity formulas, and accelerated tissue repair protocols.</p>
+            <ul class="service-outcomes-list">
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Intra-workout glycogen replenishment</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Enhanced VO2 max endurance fueling</li>
+              <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Accelerated DOMS muscle repair</li>
+            </ul>
+            <a href="404.html" class="service-link" style="margin-top: auto;">Consult Specialist <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 4: SERVICE TIER COMPARISON MATRIX
+  =================================================================== -->
+  <section class="section bg-light-mint">
+    <div class="container">
+      <div class="section-title-wrap text-center reveal-fade">
+        <span class="sub-title sub-title-gold">FEATURE BREAKDOWN</span>
+        <h2 class="main-title">Compare our clinical care tiers</h2>
+        <p class="section-desc">Choose the level of clinical dietary oversight and personal practitioner interaction that matches your needs.</p>
+      </div>
+
+      <div class="dash-card reveal-fade" style="padding: 0; overflow: hidden; border-radius: 24px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); border: 1px solid rgba(1, 62, 62, 0.15);">
+        <table class="dash-table" style="margin: 0; width: 100%; border-collapse: collapse;">
+          <thead style="background: var(--theme-color3); color: #ffffff;">
+            <tr>
+              <th style="color: #ffffff; padding: 22px 24px; font-size: 1rem;">Features & Inclusions</th>
+              <th style="color: #ffffff; padding: 22px 24px; font-size: 1rem; text-align: center;">Basic Plan ($49/mo)</th>
+              <th style="background: rgba(245, 190, 71, 0.2); color: var(--theme-color1); padding: 22px 24px; font-size: 1.05rem; text-align: center; border-left: 2px solid var(--theme-color1); border-right: 2px solid var(--theme-color1);">Standard Clinical ($99/mo) <span class="material-symbols-outlined" style="font-size: 1.05rem; vertical-align: -2px; color: var(--theme-color1);">star</span></th>
+              <th style="color: #ffffff; padding: 22px 24px; font-size: 1rem; text-align: center;">Premium Concierge ($149/mo)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight: 700; padding: 18px 24px;">Biometric Metabolic Audit</td>
+              <td style="padding: 18px 24px; text-align: center; color: var(--theme-text);">Basic Health Questionnaire</td>
+              <td style="padding: 18px 24px; text-align: center; font-weight: 700; color: var(--theme-color3); background: rgba(245, 190, 71, 0.05); border-left: 2px solid var(--theme-color1); border-right: 2px solid var(--theme-color1);">Full Lab & Biomarker Review</td>
+              <td style="padding: 18px 24px; text-align: center; color: var(--theme-text);">Complete DNA & Metabolomic Panel</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 700; padding: 18px 24px;">Custom Meal Architecture</td>
+              <td style="padding: 18px 24px; text-align: center; color: var(--theme-text);">Monthly Static Recipe Guide</td>
+              <td style="padding: 18px 24px; text-align: center; font-weight: 700; color: var(--theme-color3); background: rgba(245, 190, 71, 0.05); border-left: 2px solid var(--theme-color1); border-right: 2px solid var(--theme-color1);">Bi-Weekly Dynamic Menus</td>
+              <td style="padding: 18px 24px; text-align: center; color: var(--theme-text);">Weekly Custom Chef Prescriptions</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 700; padding: 18px 24px;">Dietitian Video Sessions</td>
+              <td style="padding: 18px 24px; text-align: center; color: var(--theme-text);">1 Session / Month</td>
+              <td style="padding: 18px 24px; text-align: center; font-weight: 700; color: var(--theme-color3); background: rgba(245, 190, 71, 0.05); border-left: 2px solid var(--theme-color1); border-right: 2px solid var(--theme-color1);">2 Sessions / Month</td>
+              <td style="padding: 18px 24px; text-align: center; color: var(--theme-text);">Weekly 1-on-1 Consultations</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 700; padding: 18px 24px;">Direct Practitioner Messaging</td>
+              <td style="padding: 18px 24px; text-align: center; color: var(--theme-text);">Standard Ticket Support</td>
+              <td style="padding: 18px 24px; text-align: center; font-weight: 700; color: var(--theme-color3); background: rgba(245, 190, 71, 0.05); border-left: 2px solid var(--theme-color1); border-right: 2px solid var(--theme-color1);">Direct Chat (24h turnaround)</td>
+              <td style="padding: 18px 24px; text-align: center; color: var(--theme-text);">Priority Instant Direct Line</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 700; padding: 18px 24px;">CGM Glucose Sensor Sync</td>
+              <td style="padding: 18px 24px; text-align: center; color: #9ca3af;">—</td>
+              <td style="padding: 18px 24px; text-align: center; font-weight: 700; color: var(--theme-color3); background: rgba(245, 190, 71, 0.05); border-left: 2px solid var(--theme-color1); border-right: 2px solid var(--theme-color1);">Supported via App Sync</td>
+              <td style="padding: 18px 24px; text-align: center; color: var(--theme-text);">Continuous Sensor Monitoring</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 5: 4-STAGE PATIENT ONBOARDING JOURNEY
+  =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap text-center reveal-fade">
+        <span class="sub-title sub-title-gold">ONBOARDING BLUEPRINT</span>
+        <h2 class="main-title">How your nutrition journey unfolds</h2>
+        <p class="section-desc">A structured, reassuring pathway from your first discovery call to lifelong sustained wellness.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card reveal-stagger">
+          <div class="process-step-num">01</div>
+          <h4 class="process-title">Intake & Bloodwork</h4>
+          <p class="process-desc">We examine comprehensive metabolic panels, hormone profiles, and your 7-day culinary log.</p>
+        </div>
+        <div class="process-card reveal-stagger">
+          <div class="process-step-num">02</div>
+          <h4 class="process-title">Strategy Mapping</h4>
+          <p class="process-desc">Your clinical dietitian crafts a tailored macro split, eliminating food triggers and optimizing energy.</p>
+        </div>
+        <div class="process-card reveal-stagger">
+          <div class="process-step-num">03</div>
+          <h4 class="process-title">Culinary Blueprint</h4>
+          <p class="process-desc">You receive your personalized recipes, shopping lists, and digital tracking dashboard access.</p>
+        </div>
+        <div class="process-card reveal-stagger">
+          <div class="process-step-num">04</div>
+          <h4 class="process-title">Weekly Recalibration</h4>
+          <p class="process-desc">Regular video consultations fine-tune portions, celebrate milestones, and lock in permanent habits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 6: NUTRITION PACKAGES & MEMBERSHIP TIERS
+  =================================================================== -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-title-wrap text-center reveal-fade">
+        <span class="sub-title">CHOOSE YOUR PLAN</span>
+        <h2 class="main-title">Transparent care memberships with no long-term contracts</h2>
+        <p class="section-desc">Pause, upgrade, or cancel your dietary care membership anytime directly from your patient portal.</p>
+
+        <!-- Interactive Billing Frequency Toggle -->
+        <div class="pricing-toggle-wrap">
+          <span class="pricing-toggle-label is-active" id="labelMonthly">Billed Monthly</span>
+          <div class="pricing-toggle-switch" id="pricingBillingToggle" role="button" tabindex="0" aria-label="Toggle Monthly or Annual Billing">
+            <div class="pricing-toggle-knob"></div>
+          </div>
+          <span class="pricing-toggle-label" id="labelAnnual">Billed Annually</span>
+          <span class="pricing-save-badge">Save 20% + Free Gut Test</span>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card reveal-stagger">
+          <div>
+            <h4 class="pricing-plan-name">Basic Plan</h4>
+            <p class="pricing-plan-desc">For healthy individuals seeking structured accountability.</p>
+            <div class="pricing-price-wrap">
+              <span class="price-currency">$</span>
+              <span class="price-amount js-pricing-val" data-monthly="49" data-annual="39">49</span>
+              <span class="price-period">/ month</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Monthly Custom Meal Blueprint</li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Grocery & Pantry Staples List</li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Mobile Calorie Tracker</li>
+            </ul>
+          </div>
+          <a href="404.html" class="btn-style2" style="width: 100%; justify-content: center;">
+            <span class="theme-btn">Choose Basic</span>
+            <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+          </a>
+        </div>
+
+        <div class="pricing-card is-featured reveal-stagger">
+          <span class="pricing-badge">MOST POPULAR</span>
+          <div>
+            <h4 class="pricing-plan-name">Standard Clinical</h4>
+            <p class="pricing-plan-desc">Our gold-standard program for deep metabolic transformation.</p>
+            <div class="pricing-price-wrap">
+              <span class="price-currency">$</span>
+              <span class="price-amount js-pricing-val" data-monthly="99" data-annual="79">99</span>
+              <span class="price-period">/ month</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Full Blood Panel & Diagnostic Review</li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Bi-Weekly 1-on-1 Video Consultations</li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 7-Day Rotating Culinary Guides</li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Direct Messaging with Lead Dietitian</li>
+            </ul>
+          </div>
+          <a href="404.html" class="btn-style2 btn-teal" style="width: 100%; justify-content: center;">
+            <span class="theme-btn">Choose Standard</span>
+            <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+          </a>
+        </div>
+
+        <div class="pricing-card reveal-stagger">
+          <div>
+            <h4 class="pricing-plan-name">Premium Concierge</h4>
+            <p class="pricing-plan-desc">For complex clinical conditions and athletic performance.</p>
+            <div class="pricing-price-wrap">
+              <span class="price-currency">$</span>
+              <span class="price-amount js-pricing-val" data-monthly="149" data-annual="119">149</span>
+              <span class="price-period">/ month</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Weekly Video Consultations with Lead Specialist</li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Continuous CGM & Glucose Monitoring Sync</li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Comprehensive Family Nutrition Guidance</li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 24/7 Dedicated Care Coordinator</li>
+            </ul>
+          </div>
+          <a href="404.html" class="btn-style2" style="width: 100%; justify-content: center;">
+            <span class="theme-btn">Choose Concierge</span>
+            <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 7: SERVICES FAQ & INSURANCE COVERAGE
+  =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="faq-column" style="max-width: 820px; margin: 0 auto;">
+        <div class="section-title-wrap text-center">
+          <span class="sub-title">FREQUENT QUESTIONS</span>
+          <h2 class="main-title">Service details & insurance questions</h2>
+          <p class="section-desc">Everything you need to know about starting care with Stackly.</p>
+        </div>
+
+        <div class="accordion-list">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5 class="accordion-title">Does health insurance cover Stackly clinical consultations?</h5>
+              <div class="accordion-icon"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+            </div>
+            <div class="accordion-content">
+              <p>Many major health insurance plans (including Aetna, BlueCross, and Cigna) provide full or partial reimbursement for Medical Nutrition Therapy (MNT) under preventative care benefits. We provide itemized superbills with clinical diagnostic codes for all sessions.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5 class="accordion-title">Can I switch plans or cancel at any time?</h5>
+              <div class="accordion-icon"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+            </div>
+            <div class="accordion-content">
+              <p>Yes, all memberships operate on month-to-month terms without locked contracts. You can pause, adjust, or cancel your membership with a single click inside your patient dashboard.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5 class="accordion-title">What happens if I have severe food allergies or intolerances?</h5>
+              <div class="accordion-icon"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+            </div>
+            <div class="accordion-content">
+              <p>Our clinical dietitians specialize in IgE food allergies, celiac disease, histamine intolerances, and FODMAP sensitivities. Every single recipe is strictly screened against your allergy profile.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5 class="accordion-title">Are the video consultations private and secure?</h5>
+              <div class="accordion-icon"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+            </div>
+            <div class="accordion-content">
+              <p>Yes, our telehealth video system is fully HIPAA-compliant and protected by 256-bit end-to-end encryption. Your medical records, biometric data, and notes remain strictly confidential.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 8: NEWSLETTER BANNER & GLOBAL FOOTER
+  =================================================================== -->
+  <section class="section bg-light-mint" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="newsletter-banner">
+        <div class="newsletter-info">
+          <h3>Subscribe to Our Newsletter</h3>
+          <p>Receive weekly science-backed diet plans, healthy recipes, and expert advice.</p>
+        </div>
+        <div class="newsletter-form-wrapper">
+          <form class="newsletter-form" novalidate>
+            <input type="email" placeholder="Enter your email address..." required aria-label="Email address for newsletter">
+            <button type="submit">Subscribe</button>
+          </form>
+          <span class="newsletter-notice">Zero spam. We respect your medical privacy & inbox.</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand"><img src="assets/images/stackly-logo-white.webp" alt="Stackly Logo" width="140" height="48"></div>
+            <p class="footer-bio">Stackly delivers clinical nutrition therapy, personalized metabolic meal plans, and ongoing dietitian support for lifelong health and wellness.</p>
+            <div class="footer-socials">
+              <a href="404.html" class="footer-social-btn" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="404.html" class="footer-social-btn" aria-label="Twitter"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z"/></svg></a>
+              <a href="404.html" class="footer-social-btn" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-widget">
+            <h5>Navigation</h5>
+            <ul class="footer-links-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Clinical Services</a></li>
+              <li><a href="project.html">Case Studies & Projects</a></li>
+              <li><a href="shop.html">Shop Formulas</a></li>
+              <li><a href="blog.html">Scientific Blog</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="pages.html">Pages Directory</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h5>Specializations</h5>
+            <ul class="footer-links-list">
+              <li><a href="services.html">Clinical Nutrition</a></li>
+              <li><a href="services.html">Family Nutrition</a></li>
+              <li><a href="services.html">Medical Nutrition</a></li>
+              <li><a href="services.html">Senior Dietary Care</a></li>
+              <li><a href="services.html">Metabolic Diet Planning</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h5>Get in Touch</h5>
+            <div class="footer-contact-info">
+              <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg><span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span></div>
+              <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg><a href="tel:+919090909090">+91 90909 09090</a></div>
+              <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:info@stackly.com">info@stackly.com</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© Copyright 2026 by Stackly Nutrition. All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="services.html">Terms & Conditions</a>
+            <a href="contact.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Cart Slide-out Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title-wrap">
+        <h3 class="cart-drawer-title">Nutrition Cart</h3>
+        <span class="cart-drawer-count">0</span>
+      </div>
+      <button class="cart-drawer-close" aria-label="Close Shopping Cart">&times;</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="free-shipping-progress">
+        <div class="free-shipping-bar" id="cartFreeShippingBar" style="width: 0%;"></div>
+      </div>
+      <div id="cartFreeShippingNote" style="font-size: 0.8rem; color: #4a5568; margin-bottom: 12px; text-align: center;"></div>
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span id="cartSubtotalAmount">$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Clinic Delivery</span>
+        <span id="cartShippingAmount">$5.99</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Estimated Total</span>
+        <span id="cartTotalAmount">$0.00</span>
+      </div>
+      <div class="cart-footer-actions">
+        <a href="shop.html" class="btn-style2 btn-teal" style="width: 100%; justify-content: center; height: 50px; line-height: 50px;">
+          <span class="theme-btn">Proceed to Shop & Checkout</span>
+          <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+        </a>
+        <button type="button" class="btn-style2 js-close-cart-btn" style="width: 100%; justify-content: center; height: 44px; line-height: 44px; background: transparent; color: var(--theme-color2); border: 1px solid #cbd5e0;">
+          <span class="theme-btn">Continue Browsing</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

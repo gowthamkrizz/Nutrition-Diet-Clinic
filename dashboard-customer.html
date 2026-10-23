@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard – Stackly Patient Wellness Hub</title>
+  <meta name="description" content="Personal patient health portal. Access your daily customized meal plan, track hydration & calories, and join video consultations.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="icon" type="image/webp" href="assets/images/stackly-logo.webp">
+</head>
+<body class="dashboard-body">
+
+  <div class="dash-shell">
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div class="dash-sidebar-overlay js-sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <a href="index.html">
+            <img src="assets/images/stackly-logo-white.webp" alt="Stackly Patient Portal" width="130" height="42">
+          </a>
+          <button type="button" class="sidebar-close-btn js-sidebar-close" aria-label="Close sidebar">
+            <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          </button>
+        </div>
+
+        <div class="sidebar-menu">
+          <span class="menu-label">My Health Journey</span>
+          <a href="#overview" class="menu-item active">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              <span>My Overview</span>
+            </div>
+          </a>
+          <a href="#meal-plan" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1zm15.03-7V7.05H1v7.94c0 3.84 2.81 7.01 6.51 7.01 3.71 0 6.52-3.17 6.52-7.01z"/></svg>
+              <span>Weekly Meal Plan</span>
+            </div>
+          </a>
+          <a href="#water-tracker" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+              <span>Hydration & Macros</span>
+            </div>
+            <span class="menu-badge">5/8</span>
+          </a>
+          <a href="#biometrics-tracker" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+              <span>Biometrics & Weight</span>
+            </div>
+            <span class="menu-badge">-6.5kg</span>
+          </a>
+          <a href="#supplement-schedule" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              <span>Daily Supplements</span>
+            </div>
+            <span class="menu-badge">3 Due</span>
+          </a>
+
+          <span class="menu-label">Clinical Care</span>
+          <a href="#consultation" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+              <span>Video Consultations</span>
+            </div>
+            <span class="menu-badge live-dot">3:30 PM</span>
+          </a>
+          <a href="#lab-results" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              <span>Lab Diagnostics</span>
+            </div>
+            <span class="menu-badge">New</span>
+          </a>
+          <a href="#care-chat" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+              <span>Care Team Messages</span>
+            </div>
+          </a>
+
+          <span class="menu-label">Kitchen & Resources</span>
+          <a href="#grocery-list" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+              <span>Grocery Shopping List</span>
+            </div>
+            <span class="menu-badge">Week 4</span>
+          </a>
+          <a href="#recipe-library" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+              <span>Therapeutic Recipes</span>
+            </div>
+          </a>
+          <a href="#invoices-superbills" class="menu-item">
+            <div class="menu-item-content">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+              <span>Invoices & Superbills</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Patient Sidebar Profile -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <img src="assets/images/avatar-1.webp" alt="User Profile" width="40" height="40" class="user-avatar-img">
+          <div class="sidebar-user-info">
+            <h6 class="user-display-name">Sarah Jenkins</h6>
+            <p class="user-display-email" title="sarah.jenkins@gmail.com">sarah.jenkins@gmail.com</p>
+          </div>
+        </div>
+        <a href="login.html" class="sidebar-logout-btn" id="customerLogoutBtn" title="Log Out of Customer Portal">
+          <svg viewBox="0 0 24 24">
+            <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+          </svg>
+          <span>Log Out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="dash-main">
+      <!-- Navbar -->
+      <header class="dash-navbar">
+        <div class="navbar-left">
+          <button class="dash-menu-toggle" aria-label="Toggle Navigation">
+            <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+          <div class="dash-search">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" placeholder="Search recipes, ingredients, notes...">
+          </div>
+        </div>
+
+        <div class="navbar-right">
+          <button class="nav-icon-btn js-dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+            <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </button>
+
+          <button class="nav-icon-btn" aria-label="Notifications" onclick="window.location.href='404.html';">
+            <span class="badge-dot"></span>
+            <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+          </button>
+
+          <a href="index.html" class="btn-outline" style="height: 38px; line-height: 36px; padding: 0 16px; font-size: 0.85rem;">
+            Public Site
+          </a>
+        </div>
+      </header>
+
+      <!-- Dashboard Body -->
+      <main class="dash-content">
+        <!-- Section: Overview -->
+        <section id="overview" class="dash-panel active-panel">
+          <!-- Greeting Header -->
+          <div class="dash-header-title">
+            <div>
+              <h2>Good Morning, Sarah!</h2>
+              <p>Program: <strong>Metabolic Reset & Gut Restoration</strong> • Week 4 of 12 (33% Complete)</p>
+            </div>
+            <a href="404.html" class="btn-style2 btn-teal" style="height: 46px; line-height: 46px; font-size: 0.88rem;">
+              <span class="theme-btn">View Today's Recipes</span>
+              <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+            </a>
+          </div>
+
+          <!-- 4 Daily Health Stat Cards -->
+          <div class="dash-stats-grid">
+            <!-- Calorie Target -->
+            <div class="dash-stat-card">
+              <div class="stat-icon icon-accent">
+                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              </div>
+              <div class="stat-info">
+                <h3>1,680</h3>
+                <p>Calories Consumed Today</p>
+                <span class="stat-change up">420 kcal remaining to target</span>
+              </div>
+            </div>
+
+            <!-- Weight Progress -->
+            <div class="dash-stat-card">
+              <div class="stat-icon icon-success">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              </div>
+              <div class="stat-info">
+                <h3>71.5 kg</h3>
+                <p>Current Weight Progress</p>
+                <span class="stat-change up">↓ 6.5 kg lost from baseline</span>
+              </div>
+            </div>
+
+            <!-- Protein Tracker -->
+            <div class="dash-stat-card">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <div class="stat-info">
+                <h3>112 g</h3>
+                <p>Protein Intake</p>
+                <span class="stat-change up">86% of daily 130g target</span>
+              </div>
+            </div>
+
+            <!-- Next Appointment -->
+            <div class="dash-stat-card">
+              <div class="stat-icon icon-warning">
+                <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+              </div>
+              <div class="stat-info">
+                <h3>3:30 PM</h3>
+                <p>Dr. Emily Carter</p>
+                <span class="stat-change" style="color: var(--dash-primary); font-weight: 700;">Live Video Consultation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Cards Grid -->
+          <div class="dash-grid-2" style="margin-top: 10px;">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h4>Today's Telehealth Appointment</h4>
+                <span class="room-status-badge live">● 3:30 PM EST</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--dash-text); line-height: 1.5; margin-bottom: 14px;">
+                Week 4 Metabolic Recalibration & Lab Review session with Dr. Emily Carter. High-definition encrypted telehealth room is ready.
+              </p>
+              <a href="404.html" class="action-btn-sm" style="background: var(--dash-primary); color: #fff; display: inline-block;">Enter Consultation Room</a>
+            </div>
+
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h4>Today's Nutrition Target</h4>
+                <span class="menu-badge" style="background: var(--dash-primary-light); color: var(--dash-primary);">Phase 1</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--dash-text); line-height: 1.5; margin-bottom: 14px;">
+                You've logged 5 of 8 glasses of water today, and your glycemic variability remains stable under 100 mg/dL.
+              </p>
+              <div style="display: flex; gap: 10px;">
+                <a href="404.html" class="action-btn-sm">Weekly Meal Plan</a>
+                <a href="404.html" class="action-btn-sm">Log Hydration</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Weekly Meal Plan -->
+        <section id="meal-plan" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2 class="js-active-day-title">Monday's Clinical Nutrition Plan</h2>
+              <p>Curated specifically for insulin balance and gut microbiome restoration</p>
+            </div>
+            <a href="404.html" class="btn-style2 btn-teal" style="height: 40px; line-height: 40px; font-size: 0.85rem;">
+              <span class="theme-btn">View Week 4 Grocery List</span>
+            </a>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4>Daily Recipe Breakdown</h4>
+              <span style="font-size: 0.82rem; color: var(--dash-text-muted);">Total: 1,700 kcal • 96g Protein • 126g Carbs</span>
+            </div>
+
+            <!-- Day Tabs -->
+            <div class="meal-days-tabs">
+              <button class="meal-day-btn active">Monday</button>
+              <button class="meal-day-btn">Tuesday</button>
+              <button class="meal-day-btn">Wednesday</button>
+              <button class="meal-day-btn">Thursday</button>
+              <button class="meal-day-btn">Friday</button>
+              <button class="meal-day-btn">Saturday</button>
+              <button class="meal-day-btn">Sunday</button>
+            </div>
+
+            <!-- 4 Meal Cards Grid -->
+            <div class="meal-cards-grid">
+              <div class="meal-card-item">
+                <span class="meal-badge">Breakfast</span>
+                <div class="meal-title">Avocado Toast & Poached Egg</div>
+                <div class="meal-macros">380 kcal • 18g Protein • 32g Carbs</div>
+              </div>
+
+              <div class="meal-card-item">
+                <span class="meal-badge">Lunch</span>
+                <div class="meal-title">Quinoa Buddha Bowl with Tahini</div>
+                <div class="meal-macros">520 kcal • 22g Protein • 58g Carbs</div>
+              </div>
+
+              <div class="meal-card-item">
+                <span class="meal-badge">Dinner</span>
+                <div class="meal-title">Grilled Salmon & Steamed Asparagus</div>
+                <div class="meal-macros">590 kcal • 42g Protein • 16g Carbs</div>
+              </div>
+
+              <div class="meal-card-item">
+                <span class="meal-badge">Snack</span>
+                <div class="meal-title">Greek Yogurt with Blueberries & Chia</div>
+                <div class="meal-macros">210 kcal • 14g Protein • 20g Carbs</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Daily Hydration Tracker -->
+        <section id="water-tracker" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Daily Hydration & Macro Intake</h2>
+              <p>Track cellular hydration target and electrolyte mineral absorption</p>
+            </div>
+            <span class="js-water-count" style="font-weight: 800; font-size: 1.05rem; color: var(--dash-primary); background: var(--dash-card); padding: 8px 18px; border-radius: 20px; border: 1px solid var(--dash-border);">5 / 8 Glasses (1.25L)</span>
+          </div>
+
+          <div class="dash-card">
+            <div class="water-tracker-box">
+              <div class="water-glasses-row">
+                <div class="water-glass filled"></div>
+                <div class="water-glass filled"></div>
+                <div class="water-glass filled"></div>
+                <div class="water-glass filled"></div>
+                <div class="water-glass filled"></div>
+                <div class="water-glass"></div>
+                <div class="water-glass"></div>
+                <div class="water-glass"></div>
+              </div>
+
+              <div class="water-controls">
+                <button type="button" class="water-btn js-water-minus" title="Subtract glass">-</button>
+                <button type="button" class="water-btn js-water-plus" title="Add glass">+</button>
+              </div>
+            </div>
+
+            <p style="font-size: 0.88rem; color: var(--dash-text-muted); margin: 0;">
+              Tip from Dr. Carter: Adding a pinch of Himalayan mineral salt to your morning water improves cellular electrolyte absorption and optimizes adrenal function during metabolic fasting intervals.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Biometrics & Weight Progress -->
+        <section id="biometrics-tracker" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Biometric Tracking & Continuous Glucose Monitoring</h2>
+              <p>Key clinical markers tracked via synced Bluetooth scale and FreeStyle Libre CGM sensor</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Sync Sensor Data</button>
+          </div>
+
+          <div class="dash-grid-3">
+            <div class="biomarker-card">
+              <div class="biomarker-header">
+                <span class="biomarker-title">Fasting Blood Glucose</span>
+                <span class="biomarker-tag optimal">Optimal</span>
+              </div>
+              <div class="biomarker-val-row">
+                <span class="biomarker-val">94</span>
+                <span class="biomarker-unit">mg/dL (Target: 70 - 99)</span>
+              </div>
+              <div class="biomarker-range-bar">
+                <div class="biomarker-range-fill" style="width: 48%; background: var(--dash-success);"></div>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--dash-text-muted); margin: 6px 0 0;">Last synced: 25 mins ago • CGM sensor active</p>
+            </div>
+
+            <div class="biomarker-card">
+              <div class="biomarker-header">
+                <span class="biomarker-title">Resting Blood Pressure</span>
+                <span class="biomarker-tag optimal">Normal</span>
+              </div>
+              <div class="biomarker-val-row">
+                <span class="biomarker-val">118/76</span>
+                <span class="biomarker-unit">mmHg (Target: &lt; 120/80)</span>
+              </div>
+              <div class="biomarker-range-bar">
+                <div class="biomarker-range-fill" style="width: 42%; background: var(--dash-primary);"></div>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--dash-text-muted); margin: 6px 0 0;">Consistent reduction over the last 14 days</p>
+            </div>
+
+            <div class="biomarker-card">
+              <div class="biomarker-header">
+                <span class="biomarker-title">Body Composition Progress</span>
+                <span class="biomarker-tag optimal">On Track</span>
+              </div>
+              <div class="biomarker-val-row">
+                <span class="biomarker-val">71.5</span>
+                <span class="biomarker-unit">kg (Down from 78.0 kg)</span>
+              </div>
+              <div class="biomarker-range-bar">
+                <div class="biomarker-range-fill" style="width: 72%; background: var(--dash-accent-dark);"></div>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--dash-text-muted); margin: 6px 0 0;">Fat mass lost: -5.4 kg • Muscle preserved: 98%</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Daily Supplements -->
+        <section id="supplement-schedule" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Daily Supplement & Micronutrient Protocol</h2>
+              <p>Prescribed by Dr. Emily Carter to support microbiome restoration and metabolic flexibility</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Mark All Complete</button>
+          </div>
+
+          <div class="supplement-grid">
+            <div class="supplement-card">
+              <input type="checkbox" class="supp-checkbox" checked id="supp1">
+              <div class="supp-info">
+                <h5>Supercritical Omega-3 EPA/DHA</h5>
+                <div class="supp-dose">1,200 mg • 1 Softgel with morning breakfast</div>
+                <span class="supp-timing-pill">Morning • Taken <span class="material-symbols-outlined" style="font-size: 0.92rem; vertical-align: -2px;">check_circle</span></span>
+              </div>
+            </div>
+
+            <div class="supplement-card">
+              <input type="checkbox" class="supp-checkbox" id="supp2">
+              <div class="supp-info">
+                <h5>Liposomal Vitamin D3 + K2 (MK-7)</h5>
+                <div class="supp-dose">5,000 IU • 4 Drops with healthy fat source</div>
+                <span class="supp-timing-pill">Morning / Lunch</span>
+              </div>
+            </div>
+
+            <div class="supplement-card">
+              <input type="checkbox" class="supp-checkbox" id="supp3">
+              <div class="supp-info">
+                <h5>Spore Probiotics & Prebiotic FOS</h5>
+                <div class="supp-dose">50 Billion CFU • 1 Capsule with evening dinner</div>
+                <span class="supp-timing-pill">Evening with Meal</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Video Consultations Room -->
+        <section id="consultation" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Live Telehealth HD Consultation Room</h2>
+              <p>HIPAA-encrypted high-definition video room with your lead clinical care team</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Test Camera & Mic</button>
+          </div>
+
+          <div class="dash-card" style="background: linear-gradient(135deg, var(--dash-primary) 0%, #063939 100%); color: #ffffff;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+              <span style="font-size: 0.75rem; font-weight: 800; background: var(--dash-accent); color: var(--dash-text-dark); padding: 4px 12px; border-radius: 20px; text-transform: uppercase;">TODAY'S SESSION</span>
+              <span style="font-size: 0.85rem; color: #b5ded5;">3:30 PM EST</span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+              <img src="assets/images/team-2.webp" alt="Dr. Emily Carter" style="width: 58px; height: 58px; border-radius: 50%; object-fit: cover; border: 2px solid var(--dash-accent);">
+              <div>
+                <h4 style="color: #ffffff; margin: 0; font-size: 1.25rem;">Dr. Emily Carter, Lead Dietitian</h4>
+                <p style="color: #c9e5df; font-size: 0.88rem; margin: 2px 0 0;">Week 4 Metabolic Recalibration & Lab Pathology Review</p>
+              </div>
+            </div>
+
+            <button type="button" class="btn-style2" style="width: 100%; justify-content: center; height: 48px; line-height: 48px;" onclick="window.location.href='404.html';">
+              <span class="theme-btn">Join HD Video Room</span>
+              <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Section: Lab Diagnostics -->
+        <section id="lab-results" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Clinical Lab Diagnostics & Blood Biomarkers</h2>
+              <p>Comprehensive Diagnostic Blood Panel (Quest Diagnostics • Drawn Oct 12, 2026)</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Download Official PDF</button>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Diagnostic Biomarker</th>
+                    <th>Your Result</th>
+                    <th>Clinical Reference Range</th>
+                    <th>Baseline (Day 1)</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>HbA1c (Glycated Hemoglobin)</strong></td>
+                    <td><strong>5.2%</strong></td>
+                    <td>&lt; 5.7% (Optimal)</td>
+                    <td>5.8% (Pre-diabetic)</td>
+                    <td><span class="status-badge confirmed">Optimal Normalized</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Fasting Serum Insulin</strong></td>
+                    <td><strong>6.2 μIU/mL</strong></td>
+                    <td>4.0 – 8.0 μIU/mL</td>
+                    <td>14.8 μIU/mL</td>
+                    <td><span class="status-badge confirmed">-58% Improvement</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>High-Sensitivity CRP</strong></td>
+                    <td><strong>0.68 mg/L</strong></td>
+                    <td>&lt; 1.0 mg/L (Low Cardiac Risk)</td>
+                    <td>2.4 mg/L</td>
+                    <td><span class="status-badge confirmed">Optimal Low</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Serum Vitamin D (25-OH)</strong></td>
+                    <td><strong>58 ng/mL</strong></td>
+                    <td>50 – 80 ng/mL (Therapeutic)</td>
+                    <td>24 ng/mL</td>
+                    <td><span class="status-badge confirmed">Deficiency Resolved</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="margin-top: 18px; padding: 14px 18px; background: var(--dash-bg); border-radius: 10px; border-left: 4px solid var(--dash-primary);">
+              <strong style="color: var(--dash-text-dark); font-size: 0.92rem;">Doctor's Clinical Summary:</strong>
+              <p style="margin: 4px 0 0; font-size: 0.86rem; color: var(--dash-text);">
+                "Sarah, your Week 4 biomarker panel shows rapid restoration of glycemic control and an extraordinary 58% reduction in fasting insulin. We will discuss tapering carbohydrate tolerance during our 3:30 PM consultation today." — <em>Dr. Emily Carter, Lead Dietitian</em>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Care Team Messages -->
+        <section id="care-chat" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Care Team Direct Communication</h2>
+              <p>HIPAA-compliant asynchronous clinical messaging directly with your lead care team</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">New Conversation</button>
+          </div>
+
+          <div class="care-team-chat-widget">
+            <div class="chat-bubble-row">
+              <img src="assets/images/team-2.webp" alt="Dr. Emily Carter">
+              <div class="chat-bubble-content">
+                <h6>Dr. Emily Carter • Clinical Dietitian</h6>
+                <p>Hello Sarah! I reviewed your meal logs for the past three days. The avocado-salmon pairings are working exceptionally well for your afternoon satiety. I've prepared our video consultation link for 3:30 PM today.</p>
+                <div style="font-size: 0.74rem; color: var(--dash-text-muted); margin-top: 6px;">Today at 9:42 AM</div>
+              </div>
+            </div>
+
+            <div class="chat-reply-input-bar">
+              <input type="text" placeholder="Type a message to Dr. Carter or ask a dietary question...">
+              <button class="action-btn-sm" style="background: var(--dash-primary); color: #ffffff;" onclick="window.location.href='404.html';">Send Message</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Grocery Shopping List -->
+        <section id="grocery-list" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Smart Grocery Shopping List (Week 4)</h2>
+              <p>Clinical nutrition ingredients tailored to your specific meal plan</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Print Grocery List</button>
+          </div>
+
+          <div class="grocery-columns">
+            <!-- Col 1 -->
+            <div class="grocery-cat-box">
+              <div class="grocery-cat-title">
+                <span><span class="material-symbols-outlined" style="font-size: 1.15rem; vertical-align: -2px; margin-right: 4px; color: var(--dash-primary);">eco</span> Fresh Produce</span>
+                <span style="font-size: 0.76rem; color: var(--dash-primary);">4 Items</span>
+              </div>
+              <div class="grocery-items-list">
+                <label class="grocery-check-item"><input type="checkbox" checked> <span>Organic Hass Avocados (4ct)</span></label>
+                <label class="grocery-check-item"><input type="checkbox" checked> <span>Baby Spinach & Arugula Blend</span></label>
+                <label class="grocery-check-item"><input type="checkbox"> <span>Fresh Green Asparagus Spears (1 lb)</span></label>
+                <label class="grocery-check-item"><input type="checkbox"> <span>Wild Organic Blueberries (2 pints)</span></label>
+              </div>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="grocery-cat-box">
+              <div class="grocery-cat-title">
+                <span><span class="material-symbols-outlined" style="font-size: 1.15rem; vertical-align: -2px; margin-right: 4px; color: var(--dash-primary);">set_meal</span> Clean Proteins & Fish</span>
+                <span style="font-size: 0.76rem; color: var(--dash-primary);">4 Items</span>
+              </div>
+              <div class="grocery-items-list">
+                <label class="grocery-check-item"><input type="checkbox" checked> <span>Wild Alaskan Sockeye Salmon (2 fillets)</span></label>
+                <label class="grocery-check-item"><input type="checkbox"> <span>Pasture-Raised Organic Eggs (1 doz)</span></label>
+                <label class="grocery-check-item"><input type="checkbox"> <span>Organic Chicken Breast Tenderloins</span></label>
+                <label class="grocery-check-item"><input type="checkbox"> <span>Plain Greek Yogurt (0% Sugar, 32 oz)</span></label>
+              </div>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="grocery-cat-box">
+              <div class="grocery-cat-title">
+                <span><span class="material-symbols-outlined" style="font-size: 1.15rem; vertical-align: -2px; margin-right: 4px; color: var(--dash-primary);">spa</span> Healthy Fats & Pantry</span>
+                <span style="font-size: 0.76rem; color: var(--dash-primary);">4 Items</span>
+              </div>
+              <div class="grocery-items-list">
+                <label class="grocery-check-item"><input type="checkbox" checked> <span>Organic Tri-Color Quinoa</span></label>
+                <label class="grocery-check-item"><input type="checkbox"> <span>Stone-Ground Sesame Tahini</span></label>
+                <label class="grocery-check-item"><input type="checkbox"> <span>Raw Organic Chia & Pumpkin Seeds</span></label>
+                <label class="grocery-check-item"><input type="checkbox"> <span>Cold-Pressed Extra Virgin Olive Oil</span></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Therapeutic Recipes -->
+        <section id="recipe-library" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Curated Therapeutic Recipe Library</h2>
+              <p>Physician-reviewed, easy prep recipes designed for gut restoration and cellular recovery</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Filter by Diet Type</button>
+          </div>
+
+          <div class="dash-grid-3">
+            <div class="dash-card">
+              <span class="meal-badge">Anti-Inflammatory</span>
+              <h5 style="margin: 0 0 6px; font-size: 1.1rem; color: var(--dash-text-dark);">Wild Salmon & Lemon Asparagus</h5>
+              <p style="font-size: 0.84rem; color: var(--dash-text-muted); margin-bottom: 12px;">Rich in marine DHA, magnesium, and glutathione for liver phase 2 detox.</p>
+              <div style="font-size: 0.82rem; color: var(--dash-text-dark); margin-bottom: 12px;"><strong>590 kcal</strong> • 20 mins prep • Gluten-Free</div>
+              <button class="action-btn-sm" style="width: 100%; text-align: center;" onclick="window.location.href='404.html';">View Recipe & Steps</button>
+            </div>
+
+            <div class="dash-card">
+              <span class="meal-badge">Microbiome Fuel</span>
+              <h5 style="margin: 0 0 6px; font-size: 1.1rem; color: var(--dash-text-dark);">Quinoa Mediterranean Buddha Bowl</h5>
+              <p style="font-size: 0.84rem; color: var(--dash-text-muted); margin-bottom: 12px;">High prebiotic fiber, polyphenols from tahini, and plant-based protein.</p>
+              <div style="font-size: 0.82rem; color: var(--dash-text-dark); margin-bottom: 12px;"><strong>520 kcal</strong> • 15 mins prep • Vegan</div>
+              <button class="action-btn-sm" style="width: 100%; text-align: center;" onclick="window.location.href='404.html';">View Recipe & Steps</button>
+            </div>
+
+            <div class="dash-card">
+              <span class="meal-badge">Brain Health</span>
+              <h5 style="margin: 0 0 6px; font-size: 1.1rem; color: var(--dash-text-dark);">Berry Chia Gut Restoration Pudding</h5>
+              <p style="font-size: 0.84rem; color: var(--dash-text-muted); margin-bottom: 12px;">Rich in soluble mucilage fiber that coats and heals the intestinal lining.</p>
+              <div style="font-size: 0.82rem; color: var(--dash-text-dark); margin-bottom: 12px;"><strong>210 kcal</strong> • 5 mins prep • Low Glycemic</div>
+              <button class="action-btn-sm" style="width: 100%; text-align: center;" onclick="window.location.href='404.html';">View Recipe & Steps</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Invoices & Superbills -->
+        <section id="invoices-superbills" class="dash-panel">
+          <div class="dash-header-title">
+            <div>
+              <h2>Invoices & Insurance Superbills</h2>
+              <p>Download coded itemized superbills to submit to your insurance for out-of-network reimbursement</p>
+            </div>
+            <button class="action-btn-sm" style="height: 40px; padding: 0 16px;" onclick="window.location.href='404.html';">Download All (ZIP)</button>
+          </div>
+
+          <div class="dash-grid-2">
+            <div class="superbill-card">
+              <div class="superbill-info">
+                <h5>Invoice #INV-2026-8942-01</h5>
+                <p>Medical Nutrition Therapy Initial Intake (CPT 97802) • Dr. Daniel Carter</p>
+                <div style="font-size: 0.85rem; color: var(--dash-success); font-weight: 700; margin-top: 4px;">Paid $185.00 • Superbill Issued</div>
+              </div>
+              <button class="action-btn-sm" onclick="window.location.href='404.html';">Download Superbill PDF</button>
+            </div>
+
+            <div class="superbill-card">
+              <div class="superbill-info">
+                <h5>Invoice #INV-2026-8942-02</h5>
+                <p>MNT Re-assessment & Metabolic Follow-up (CPT 97803) • Dr. Emily Carter</p>
+                <div style="font-size: 0.85rem; color: var(--dash-success); font-weight: 700; margin-top: 4px;">Paid $125.00 • Superbill Issued</div>
+              </div>
+              <button class="action-btn-sm" onclick="window.location.href='404.html';">Download Superbill PDF</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

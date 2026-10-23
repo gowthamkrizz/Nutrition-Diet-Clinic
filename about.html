@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – Stackly Clinical Nutrition & Wellness Center</title>
+  <meta name="description" content="Learn about Stackly's clinical mission, board-certified nutritionists, laboratory standards, and decade-long journey to transforming human health.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/webp" href="assets/images/stackly-logo.webp">
+</head>
+<body>
+
+  <!-- ===================================================================
+       SECTION 1: TOP BAR & SITE HEADER
+  =================================================================== -->
+  <!-- Top Navigation Header (Same like Home Page Header) -->
+  <header class="site-header">
+    <nav class="hero-navbar-inner">
+      <!-- Stackly Brand Logo -->
+      <a href="index.html" class="hero-brand-logo">
+        <img src="assets/images/stackly-logo-white.webp" alt="Stackly Logo" width="140" height="48">
+      </a>
+
+      <!-- Center Navigation Links -->
+      <ul class="hero-nav-menu">
+        <li><a href="index.html" class="hero-nav-link">HOME</a></li>
+        <li class="active"><a href="about.html" class="hero-nav-link">ABOUT</a></li>
+        <li><a href="services.html" class="hero-nav-link">SERVICES</a></li>
+        <li><a href="project.html" class="hero-nav-link">PROJECTS</a></li>
+        <li><a href="shop.html" class="hero-nav-link">SHOP</a></li>
+        <li><a href="blog.html" class="hero-nav-link">BLOG</a></li>
+        <li><a href="contact.html" class="hero-nav-link">CONTACT</a></li>
+        <li><a href="pages.html" class="hero-nav-link">PAGES</a></li>
+      </ul>
+
+      <!-- Right Header Actions (Cart Button, Get Started Button & Mobile Menu Toggle) -->
+      <div class="hero-nav-actions">
+        <a href="shop.html" class="header-cart-btn js-cart-trigger" aria-label="View Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge-count">0</span>
+        </a>
+        <a href="login.html" class="btn-style2 hero-btn-get-started" aria-label="Get Started with Stackly">
+          <span class="theme-btn-arrow-left">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+          </span>
+          <span class="theme-btn">Get Started</span>
+          <span class="theme-btn-arrow-right">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+          </span>
+        </a>
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="mobile-menu-toggle js-mobile-toggle" aria-label="Open Navigation Menu" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Offcanvas Slide Drawer Panel -->
+  <div class="offcanvas-overlay"></div>
+  <aside class="offcanvas-panel">
+    <div class="offcanvas-header">
+      <img src="assets/images/stackly-logo.webp" alt="Stackly" width="130" height="44">
+      <button class="offcanvas-close" aria-label="Close Panel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+    </div>
+    <div class="offcanvas-body">
+      <h4 style="margin-bottom: 12px;">About Stackly</h4>
+      <p class="offcanvas-about">Stackly is an industry-leading clinical nutrition & holistic wellness center. We provide scientific dietary guidance, personalized metabolic meal plans, and ongoing health coaching.</p>
+      <div class="offcanvas-contact-list">
+        <div class="offcanvas-contact-item">
+          <div class="offcanvas-contact-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg></div>
+          <div class="offcanvas-contact-text"><h6>Call Us</h6><p>+88 017 500 500 88</p></div>
+        </div>
+        <div class="offcanvas-contact-item">
+          <div class="offcanvas-contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div class="offcanvas-contact-text"><h6>Email Us</h6><p>support@stackly.com</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <a href="404.html" class="btn-style2 btn-teal" style="width: 100%; justify-content: center;">
+        <span class="theme-btn">Book Consultation</span>
+        <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html">
+          <img src="assets/images/stackly-logo-white.webp" alt="Stackly" width="130" height="42">
+        </a>
+        <button class="mobile-drawer-close js-mobile-close" aria-label="Close Navigation Menu" type="button">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html"><span>Home</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item active"><a href="about.html"><span>About Us</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="services.html"><span>Services</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="project.html"><span>Case Studies / Projects</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="shop.html"><span>Shop / Products</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="blog.html"><span>Scientific Blog</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="contact.html"><span>Contact Us</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="pages.html"><span>Pages & Tools</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn-style2" style="width: 100%; justify-content: center;">
+        <span class="theme-btn">Get Started</span>
+        <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+      </a>
+      <div class="mobile-drawer-contact-strip">
+        <a href="tel:+919090909090" class="mobile-drawer-contact-item">
+          <span class="material-symbols-outlined">call</span>
+          <span>+91 90909 09090</span>
+        </a>
+        <a href="mailto:info@stackly.com" class="mobile-drawer-contact-item">
+          <span class="material-symbols-outlined">mail</span>
+          <span>info@stackly.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-overlay modal-overlay"></div>
+  <div class="search-modal">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <h4 style="margin: 0;">Search About Stackly</h4>
+      <button class="modal-close search-close"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+    </div>
+    <div class="search-input-wrap">
+      <input type="text" placeholder="Search dietitians, accreditations, timeline...">
+      <button aria-label="Submit Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SECTION 2: PAGE TITLE BANNER (Breadcrumb Hero)
+  =================================================================== -->
+  <section class="page-title-banner">
+    <div class="container">
+      <h1>About Us – Our Story & Clinical Mission</h1>
+      <div class="breadcrumb-trail">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">About Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 3: THE STACKLY STORY & FOUNDING VISION
+  =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-media">
+          <img src="assets/images/about-nutrition.webp" alt="Stackly Founding Story" class="about-main-img" width="500" height="480">
+          <div class="about-exp-badge">
+            <div class="about-exp-number">12+</div>
+            <div class="about-exp-text">Years Pioneer in Metabolic Health</div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="sub-title sub-title-gold">OUR FOUNDING VISION</span>
+          <h2 class="main-title">Redefining clinical nutrition through empirical science</h2>
+          <p class="section-desc">
+            Stackly was established in 2014 by a team of clinical dietitians and medical researchers frustrated by trend-driven, ineffective dietary advice. We set out to build an institution where biochemistry, microbiome profiling, and human behavioral psychology work hand-in-hand.
+          </p>
+          <p class="section-desc">
+            Over the past decade, we have helped more than 15,000 individuals reverse metabolic dysfunction, regulate cardiovascular biomarkers, and achieve sustainable weight balance without deprivation.
+          </p>
+
+          <div class="about-features-grid">
+            <div class="about-feature-item">
+              <div class="about-feature-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+              <h5 class="about-feature-title">Board-Certified Dietitians</h5>
+            </div>
+            <div class="about-feature-item">
+              <div class="about-feature-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+              <h5 class="about-feature-title">Diagnostic Lab Testing</h5>
+            </div>
+          </div>
+
+          <a href="404.html" class="btn-style2 btn-teal" style="margin-top: 15px;">
+            <span class="theme-btn">Explore Our Care Model</span>
+            <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 4: MISSION, VISION & CORE VALUES
+  =================================================================== -->
+  <section class="section bg-light-mint">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-title">CORE PRINCIPLES</span>
+        <h2 class="main-title">Our mission, vision and clinical values</h2>
+        <p class="section-desc">Guiding every patient interaction, dietary blueprint, and clinical breakthrough.</p>
+      </div>
+
+      <div class="services-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div class="service-card" style="background: #ffffff;">
+          <div class="service-icon-box" style="background: var(--theme-color4); color: var(--theme-color3);"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
+          <h4 class="service-title">Our Clinical Mission</h4>
+          <p class="service-desc">To eradicate chronic lifestyle-driven metabolic diseases through personalized precision nutrition, clinical patient advocacy, and actionable culinary education.</p>
+        </div>
+
+        <div class="service-card" style="background: #ffffff;">
+          <div class="service-icon-box" style="background: var(--theme-color1); color: var(--theme-color2);"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+          <h4 class="service-title">Our Global Vision</h4>
+          <p class="service-desc">To establish the worldwide gold-standard for evidence-based nutritional therapeutics, where food is leveraged as the primary medicine for longevity.</p>
+        </div>
+
+        <div class="service-card" style="background: #ffffff;">
+          <div class="service-icon-box" style="background: var(--theme-color4); color: var(--theme-color3);"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></div>
+          <h4 class="service-title">Our Core Values</h4>
+          <p class="service-desc">Integrity in scientific research, radical patient empathy, sustainable long-term habits over temporary fads, and accessible digital healthcare for all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 5: OUR MILESTONES & GROWTH TIMELINE
+  =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-title">OUR JOURNEY</span>
+        <h2 class="main-title">A decade of clinical excellence & growth</h2>
+        <p class="section-desc">Key milestones in our evolution into an internationally recognized nutrition center.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step-num" style="font-size: 1.15rem; font-weight: 800;">2014</div>
+          <h4 class="process-title">Clinic Founded</h4>
+          <p class="process-desc">Opened our flagship clinical nutrition center in New York with 3 certified dietitians.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-step-num" style="font-size: 1.15rem; font-weight: 800;">2018</div>
+          <h4 class="process-title">Lab Diagnostics</h4>
+          <p class="process-desc">Integrated advanced blood, hormonal, and microbiome testing into all patient protocols.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-step-num" style="font-size: 1.15rem; font-weight: 800;">2022</div>
+          <h4 class="process-title">Telehealth Portal</h4>
+          <p class="process-desc">Launched the Stackly digital health portal, expanding care to over 15 countries.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-step-num" style="font-size: 1.15rem; font-weight: 800;">2026</div>
+          <h4 class="process-title">Global Leadership</h4>
+          <p class="process-desc">Over 15,000 successful client transformations and accredited clinical excellence awards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 6: EXPERT CLINICAL TEAM
+  =================================================================== -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-title">OUR SPECIALISTS</span>
+        <h2 class="main-title">Meet the team behind your health transformation</h2>
+        <p class="section-desc">Backed by 10+ years of clinical experience, board certifications, and 99% patient satisfaction.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Specialist 1 -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/images/team-1.webp" alt="Dr. Daniel Carter" width="300" height="310">
+            <div class="team-social-overlay">
+              <a href="404.html" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4 class="team-name">Dr. Daniel Carter</h4>
+            <p class="team-role">Chief Clinical Nutritionist, PhD</p>
+          </div>
+        </div>
+
+        <!-- Specialist 2 -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/images/team-2.webp" alt="Dr. Emily Carter" width="300" height="310">
+            <div class="team-social-overlay">
+              <a href="404.html" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4 class="team-name">Emily Carter</h4>
+            <p class="team-role">Metabolic Health Director, MS RD</p>
+          </div>
+        </div>
+
+        <!-- Specialist 3 -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/images/team-3.webp" alt="Michael Turner" width="300" height="310">
+            <div class="team-social-overlay">
+              <a href="404.html" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4 class="team-name">Michael Turner</h4>
+            <p class="team-role">Senior Clinical Dietitian, CNS</p>
+          </div>
+        </div>
+
+        <!-- Specialist 4 -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/images/team-4.webp" alt="Emma Wilson" width="300" height="310">
+            <div class="team-social-overlay">
+              <a href="404.html" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4 class="team-name">Emma Wilson</h4>
+            <p class="team-role">Pediatric & Family Dietitian</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 7: ACCREDITATIONS & LABORATORY STANDARDS
+  =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="services-footer-banner" style="background: var(--theme-color3); color: #ffffff; border: none; padding: 36px 45px; border-radius: var(--theme-radius);">
+        <div>
+          <span class="sub-title sub-title-gold" style="margin-bottom: 8px;">CLINICAL ACCREDITATION</span>
+          <h3 style="color: #ffffff; margin-bottom: 6px;">Certified by the Academy of Nutrition & Dietetics</h3>
+          <p style="color: #d1deda; margin: 0; font-size: 0.95rem;">All Stackly medical protocols adhere to rigorous CLIA-certified laboratory testing and HIPAA-compliant telehealth encryption.</p>
+        </div>
+        <a href="404.html" class="btn-style2" style="background: var(--theme-color1); color: var(--theme-color2);">
+          <span class="theme-btn">Book Consultation</span>
+          <span class="theme-btn-arrow-right"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 8: NEWSLETTER BANNER & GLOBAL FOOTER
+  =================================================================== -->
+  <section class="section bg-light-mint" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="newsletter-banner">
+        <div class="newsletter-info">
+          <h3>Subscribe to Our Newsletter</h3>
+          <p>Receive weekly science-backed diet plans, healthy recipes, and expert advice.</p>
+        </div>
+        <div class="newsletter-form-wrapper">
+          <form class="newsletter-form" novalidate>
+            <input type="email" placeholder="Enter your email address..." required aria-label="Email address for newsletter">
+            <button type="submit">Subscribe</button>
+          </form>
+          <span class="newsletter-notice">Zero spam. We respect your medical privacy & inbox.</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand"><img src="assets/images/stackly-logo-white.webp" alt="Stackly Logo" width="140" height="48"></div>
+            <p class="footer-bio">Stackly delivers clinical nutrition therapy, personalized metabolic meal plans, and ongoing dietitian support for lifelong health and wellness.</p>
+            <div class="footer-socials">
+              <a href="404.html" class="footer-social-btn" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="404.html" class="footer-social-btn" aria-label="Twitter"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z"/></svg></a>
+              <a href="404.html" class="footer-social-btn" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-widget">
+            <h5>Navigation</h5>
+            <ul class="footer-links-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Clinical Services</a></li>
+              <li><a href="project.html">Case Studies & Projects</a></li>
+              <li><a href="shop.html">Shop Formulas</a></li>
+              <li><a href="blog.html">Scientific Blog</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="pages.html">Pages Directory</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h5>Specializations</h5>
+            <ul class="footer-links-list">
+              <li><a href="services.html">Clinical Nutrition</a></li>
+              <li><a href="services.html">Family Nutrition</a></li>
+              <li><a href="services.html">Medical Nutrition</a></li>
+              <li><a href="services.html">Senior Dietary Care</a></li>
+              <li><a href="services.html">Metabolic Diet Planning</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h5>Get in Touch</h5>
+            <div class="footer-contact-info">
+              <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg><span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span></div>
+              <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg><a href="tel:+919090909090">+91 90909 09090</a></div>
+              <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:info@stackly.com">info@stackly.com</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© Copyright 2026 by Stackly Nutrition. All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="services.html">Terms & Conditions</a>
+            <a href="contact.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Cart Slide-out Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title-wrap">
+        <h3 class="cart-drawer-title">Nutrition Cart</h3>
+        <span class="cart-drawer-count">0</span>
+      </div>
+      <button class="cart-drawer-close" aria-label="Close Shopping Cart">&times;</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="free-shipping-progress">
+        <div class="free-shipping-bar" id="cartFreeShippingBar" style="width: 0%;"></div>
+      </div>
+      <div id="cartFreeShippingNote" style="font-size: 0.8rem; color: #4a5568; margin-bottom: 12px; text-align: center;"></div>
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span id="cartSubtotalAmount">$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Clinic Delivery</span>
+        <span id="cartShippingAmount">$5.99</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Estimated Total</span>
+        <span id="cartTotalAmount">$0.00</span>
+      </div>
+      <div class="cart-footer-actions">
+        <a href="shop.html" class="btn-style2 btn-teal" style="width: 100%; justify-content: center; height: 50px; line-height: 50px;">
+          <span class="theme-btn">Proceed to Shop & Checkout</span>
+          <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+        </a>
+        <button type="button" class="btn-style2 js-close-cart-btn" style="width: 100%; justify-content: center; height: 44px; line-height: 44px; background: transparent; color: var(--theme-color2); border: 1px solid #cbd5e0;">
+          <span class="theme-btn">Continue Browsing</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

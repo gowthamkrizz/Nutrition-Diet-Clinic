@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up – Join Stackly Clinical Nutrition & Wellness</title>
+  <meta name="description" content="Create your Stackly account to access personalized clinical nutrition therapy, daily metabolic guidance, and certified dietitian consultations.">
+  <link rel="icon" type="image/webp" href="assets/images/stackly-logo.webp">
+  
+  <!-- Google Fonts: Ubuntu & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Authentication Modern Styles -->
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body class="auth-body">
+
+  <!-- Standalone Auth Split-Card Section -->
+  <main class="auth-page-section">
+
+    <!-- Background Ambient & Radar Glow Layer -->
+    <div class="auth-bg-ambient-layer">
+      <div class="auth-radar-ring auth-radar-ring-1"></div>
+      <div class="auth-radar-ring auth-radar-ring-2"></div>
+    </div>
+
+    <!-- Main Auth Card -->
+    <div class="auth-split-card">
+      
+      <!-- Left Visual Card with Brand + Wellness Showcase -->
+      <div class="auth-left-banner">
+        <div class="auth-banner-top">
+          <div class="auth-banner-header">
+            <a href="index.html" class="auth-banner-logo" title="Back to Home">
+              <img src="assets/images/stackly-logo-white.webp" alt="Stackly Nutrition & Wellness" class="auth-logo-img">
+            </a>
+
+            <div class="auth-badge-pill">
+              <i class="fas fa-users"></i>
+              <span>JOIN OUR NETWORK</span>
+            </div>
+          </div>
+
+          <h2 class="auth-banner-headline">Begin your <span class="accent-text">wellness</span> journey</h2>
+
+          <p class="auth-banner-desc">
+            Join thousands of patients, wellness seekers, and clinical specialists who rely on Stackly to restore metabolic health, optimize cellular nutrition, and achieve lasting vitality.
+          </p>
+        </div>
+
+        <!-- Wellness Showcase Image -->
+        <div class="auth-banner-img-wrap">
+          <img src="assets/images/team-1.webp" alt="Stackly Clinical Nutrition Specialist" class="auth-banner-agent-img">
+        </div>
+
+        <!-- 3 Feature Badges -->
+        <div class="auth-banner-features">
+          <div class="auth-feature-pill">
+            <i class="fas fa-gift"></i>
+            <span>Free Consultation</span>
+          </div>
+          <div class="auth-feature-pill">
+            <i class="fas fa-heartbeat"></i>
+            <span>Clinical Telemetry</span>
+          </div>
+          <div class="auth-feature-pill">
+            <i class="fas fa-user-md"></i>
+            <span>Doctor-Guided</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form Section -->
+      <div class="auth-right-content">
+        <div class="auth-top-bar">
+          <a href="index.html" class="auth-back-link">
+            <i class="fas fa-home"></i>
+            <span>Back to Home</span>
+          </a>
+          <span class="auth-top-tag">— CREATE ACCOUNT</span>
+        </div>
+
+        <div class="auth-heading-group">
+          <h1 class="auth-main-title">Sign <span class="accent-text">up</span></h1>
+          <p class="auth-subtitle">
+            Fill in your details below to get started with Stackly Clinical Nutrition & Wellness Platform.
+          </p>
+        </div>
+
+        <form class="auth-form" id="signupForm" novalidate>
+          <!-- First Name & Last Name in 2 columns -->
+          <div class="auth-form-grid-2">
+            <div class="auth-field-group">
+              <label class="auth-label" for="signupFirstName">FIRST NAME <span class="required-star">*</span></label>
+              <div class="auth-input-wrap">
+                <span class="auth-field-icon">
+                  <i class="fas fa-user"></i>
+                </span>
+                <input type="text" id="signupFirstName" class="auth-input" placeholder="Sarah" autocomplete="given-name">
+              </div>
+              <div class="auth-error-msg" id="signupFirstNameError">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>First name must be at least 2 characters.</span>
+              </div>
+            </div>
+
+            <div class="auth-field-group">
+              <label class="auth-label" for="signupLastName">LAST NAME <span class="required-star">*</span></label>
+              <div class="auth-input-wrap">
+                <span class="auth-field-icon">
+                  <i class="fas fa-user"></i>
+                </span>
+                <input type="text" id="signupLastName" class="auth-input" placeholder="Jenkins" autocomplete="family-name">
+              </div>
+              <div class="auth-error-msg" id="signupLastNameError">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Last name is required.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Address -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="signupEmail">EMAIL ADDRESS <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <input type="email" id="signupEmail" class="auth-input" placeholder="sarah@example.com" autocomplete="email">
+            </div>
+            <div class="auth-error-msg" id="signupEmailError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Please enter a valid email address.</span>
+            </div>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="signupPhone">PHONE NUMBER (10 DIGITS) <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-phone"></i>
+              </span>
+              <input type="tel" id="signupPhone" class="auth-input" placeholder="e.g. 9876543210" maxlength="10" autocomplete="tel">
+            </div>
+            <div class="auth-error-msg" id="signupPhoneError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Please enter a valid 10-digit phone number.</span>
+            </div>
+          </div>
+
+          <!-- Select Portal -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="signupPortal">SELECT PORTAL <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-clinic-medical"></i>
+              </span>
+              <select id="signupPortal" class="auth-input auth-select">
+                <option value="" disabled selected>Select your portal...</option>
+                <option value="customer">Patient & Wellness Portal</option>
+                <option value="admin">Clinical Dietitian & Specialist Console</option>
+              </select>
+              <span class="auth-select-arrow">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </div>
+            <div class="auth-error-msg" id="signupPortalError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Please select your target portal.</span>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="signupPassword">PASSWORD <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-lock"></i>
+              </span>
+              <input type="password" id="signupPassword" class="auth-input" placeholder="Min. 8 characters" autocomplete="new-password">
+              <button type="button" class="password-toggle-btn" id="signupPassToggle" aria-label="Toggle password visibility">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+            <div class="auth-error-msg" id="signupPasswordError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Password must satisfy all 4 criteria below.</span>
+            </div>
+
+            <!-- Password Checklist with real-time green check updates -->
+            <div class="password-checklist">
+              <div class="checklist-item" id="signupRuleLen">
+                <i class="far fa-check-circle"></i>
+                <span>At least 8 characters</span>
+              </div>
+              <div class="checklist-item" id="signupRuleUpper">
+                <i class="far fa-check-circle"></i>
+                <span>At least one uppercase (A-Z)</span>
+              </div>
+              <div class="checklist-item" id="signupRuleLower">
+                <i class="far fa-check-circle"></i>
+                <span>At least one lowercase (a-z)</span>
+              </div>
+              <div class="checklist-item" id="signupRuleNum">
+                <i class="far fa-check-circle"></i>
+                <span>At least one number (0-9)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="signupConfirmPassword">CONFIRM PASSWORD <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-lock"></i>
+              </span>
+              <input type="password" id="signupConfirmPassword" class="auth-input" placeholder="Re-enter your password" autocomplete="new-password">
+              <button type="button" class="password-toggle-btn" id="signupConfirmPassToggle" aria-label="Toggle password visibility">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+            <div class="auth-error-msg" id="signupConfirmPasswordError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Passwords do not match.</span>
+            </div>
+          </div>
+
+          <!-- Terms of Service Agreement -->
+          <div class="auth-field-group">
+            <div class="auth-options-row">
+              <label class="auth-checkbox-label" for="signupTerms">
+                <input type="checkbox" id="signupTerms">
+                <span>I agree to Stackly's <a href="services.html" class="auth-terms-link">Terms of Service</a> & <a href="contact.html" class="auth-terms-link">Privacy Policy</a></span>
+              </label>
+            </div>
+            <div class="auth-error-msg" id="signupTermsError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>You must accept the Terms of Service & Privacy Policy to continue.</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="auth-submit-btn" id="signupSubmitBtn">
+            <span>CREATE ACCOUNT</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer-prompt">
+          Already have an account? <a href="login.html">Sign in here</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

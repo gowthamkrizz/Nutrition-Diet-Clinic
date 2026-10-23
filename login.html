@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In – Stackly Patient & Clinical Nutrition Portal</title>
+  <meta name="description" content="Sign in to your Stackly account to manage personalized clinical nutrition therapy, monitor biomarker telemetry, and consult with registered dietitians.">
+  <link rel="icon" type="image/webp" href="assets/images/stackly-logo.webp">
+  
+  <!-- Google Fonts: Ubuntu & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Authentication Modern Styles -->
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body class="auth-body">
+
+  <!-- Standalone Auth Split-Card Section -->
+  <main class="auth-page-section">
+
+    <!-- Background Ambient & Radar Glow Layer -->
+    <div class="auth-bg-ambient-layer">
+      <div class="auth-radar-ring auth-radar-ring-1"></div>
+      <div class="auth-radar-ring auth-radar-ring-2"></div>
+    </div>
+
+    <!-- Main Auth Card -->
+    <div class="auth-split-card">
+      
+      <!-- Left Visual Card with Brand + Clinical Nutrition Showcase -->
+      <div class="auth-left-banner">
+        <div class="auth-banner-top">
+          <div class="auth-banner-header">
+            <a href="index.html" class="auth-banner-logo" title="Back to Home">
+              <img src="assets/images/stackly-logo-white.webp" alt="Stackly Nutrition & Wellness" class="auth-logo-img">
+            </a>
+
+            <div class="auth-badge-pill">
+              <i class="fas fa-shield-alt"></i>
+              <span>WELCOME BACK</span>
+            </div>
+          </div>
+
+          <h2 class="auth-banner-headline">Unlock your <span class="accent-text">wellness</span> clarity</h2>
+
+          <p class="auth-banner-desc">
+            Access your Stackly account to manage your personalized clinical nutrition plans, monitor metabolic biomarkers, review lab diagnostics, and consult with registered dietitians.
+          </p>
+        </div>
+
+        <!-- Clinical Nutrition Showcase Image -->
+        <div class="auth-banner-img-wrap">
+          <img src="assets/images/about-nutrition.webp" alt="Stackly Clinical Nutrition Intake" class="auth-banner-agent-img">
+        </div>
+
+        <!-- 3 Feature Badges -->
+        <div class="auth-banner-features">
+          <div class="auth-feature-pill">
+            <i class="fas fa-shield-alt"></i>
+            <span>Secure Access</span>
+          </div>
+          <div class="auth-feature-pill">
+            <i class="fas fa-stethoscope"></i>
+            <span>VIP Concierge</span>
+          </div>
+          <div class="auth-feature-pill">
+            <i class="fas fa-award"></i>
+            <span>Certified Dietitians</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form Section -->
+      <div class="auth-right-content">
+        <div class="auth-top-bar">
+          <a href="index.html" class="auth-back-link">
+            <i class="fas fa-home"></i>
+            <span>Back to Home</span>
+          </a>
+          <span class="auth-top-tag">— WELCOME BACK</span>
+        </div>
+
+        <div class="auth-heading-group">
+          <h1 class="auth-main-title">Sign <span class="accent-text">in</span></h1>
+          <p class="auth-subtitle">
+            Enter your credentials below to access your Stackly patient & clinical portal.
+          </p>
+        </div>
+
+        <form class="auth-form" id="loginForm" novalidate>
+          <!-- Username -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="loginUsername">USERNAME <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-user"></i>
+              </span>
+              <input type="text" id="loginUsername" class="auth-input" placeholder="Enter your username" autocomplete="username">
+            </div>
+            <div class="auth-error-msg" id="loginUsernameError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Username must be at least 3 characters.</span>
+            </div>
+          </div>
+
+          <!-- Select Portal -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="loginPortal">SELECT PORTAL <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-clinic-medical"></i>
+              </span>
+              <select id="loginPortal" class="auth-input auth-select">
+                <option value="" disabled selected>Select your portal...</option>
+                <option value="customer">Patient & Wellness Portal</option>
+                <option value="admin">Dietitian & Clinical Admin Console</option>
+              </select>
+              <span class="auth-select-arrow">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </div>
+            <div class="auth-error-msg" id="loginPortalError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Please select your clinical portal.</span>
+            </div>
+          </div>
+
+          <!-- Email Address -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="loginEmail">EMAIL ADDRESS <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <input type="email" id="loginEmail" class="auth-input" placeholder="you@company.com" autocomplete="email">
+            </div>
+            <div class="auth-error-msg" id="loginEmailError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Please enter a valid email address (e.g. name@domain.com).</span>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="loginPassword">PASSWORD <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-lock"></i>
+              </span>
+              <input type="password" id="loginPassword" class="auth-input" placeholder="Min. 8 characters" autocomplete="current-password">
+              <button type="button" class="password-toggle-btn" id="loginPassToggle" aria-label="Toggle password visibility">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+            <div class="auth-error-msg" id="loginPasswordError">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Password must satisfy all 4 criteria below.</span>
+            </div>
+
+            <!-- Password Checklist with real-time green check updates -->
+            <div class="password-checklist">
+              <div class="checklist-item" id="loginRuleLen">
+                <i class="far fa-check-circle"></i>
+                <span>At least 8 characters</span>
+              </div>
+              <div class="checklist-item" id="loginRuleUpper">
+                <i class="far fa-check-circle"></i>
+                <span>At least one uppercase (A-Z)</span>
+              </div>
+              <div class="checklist-item" id="loginRuleLower">
+                <i class="far fa-check-circle"></i>
+                <span>At least one lowercase (a-z)</span>
+              </div>
+              <div class="checklist-item" id="loginRuleNum">
+                <i class="far fa-check-circle"></i>
+                <span>At least one number (0-9)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Options -->
+          <div class="auth-options-row">
+            <label class="auth-checkbox-label">
+              <input type="checkbox" id="loginRemember" checked>
+              <span>Remember me</span>
+            </label>
+            <a href="#forgotPassModal" class="auth-forgot-link">Forgot password?</a>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="auth-submit-btn" id="loginSubmitBtn">
+            <span>SIGN IN</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <div class="auth-footer-prompt">
+          Don't have an account? <a href="signup.html">Create one free</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Forgot Password Modal -->
+  <div class="auth-modal-backdrop" id="forgotPassModal">
+    <div class="auth-modal-card">
+      <div class="auth-modal-header">
+        <div class="auth-modal-title">Reset Your Credentials</div>
+        <button class="auth-modal-close-btn" id="forgotPassClose" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="forgotPassForm">
+        <div class="auth-modal-body">
+          <p style="margin-bottom: 1.25rem;">
+            Enter your registered Stackly patient or dietitian email address below. We will send you an encrypted verification link to reset your credentials.
+          </p>
+          <div class="auth-field-group">
+            <label class="auth-label" for="forgotEmail">ACCOUNT EMAIL <span class="required-star">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-field-icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <input type="email" id="forgotEmail" class="auth-input" placeholder="you@company.com" required>
+            </div>
+          </div>
+        </div>
+        <div class="auth-modal-footer">
+          <button type="submit" class="auth-submit-btn" style="width: auto; padding: 0.75rem 1.5rem; margin: 0;">
+            <span>Send Reset Link</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

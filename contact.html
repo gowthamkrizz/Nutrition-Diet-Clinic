@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Clinical Consultations – Stackly Nutrition & Wellness</title>
+  <meta name="description" content="Get in touch with Stackly clinical nutritionists. Schedule an in-person appointment at our Salem wellness center or book a secure telehealth video consultation.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/webp" href="assets/images/stackly-logo.webp">
+</head>
+<body>
+
+  <!-- ===================================================================
+       SECTION 1: FIXED TOP HEADER & NAVIGATION
+  =================================================================== -->
+  <header class="site-header">
+    <nav class="hero-navbar-inner">
+      <!-- Stackly Brand Logo -->
+      <a href="index.html" class="hero-brand-logo">
+        <img src="assets/images/stackly-logo-white.webp" alt="Stackly Logo" width="140" height="48">
+      </a>
+
+      <!-- Center Navigation Links -->
+      <ul class="hero-nav-menu">
+        <li><a href="index.html" class="hero-nav-link">HOME</a></li>
+        <li><a href="about.html" class="hero-nav-link">ABOUT</a></li>
+        <li><a href="services.html" class="hero-nav-link">SERVICES</a></li>
+        <li><a href="project.html" class="hero-nav-link">PROJECTS</a></li>
+        <li><a href="shop.html" class="hero-nav-link">SHOP</a></li>
+        <li><a href="blog.html" class="hero-nav-link">BLOG</a></li>
+        <li class="active"><a href="contact.html" class="hero-nav-link">CONTACT</a></li>
+        <li><a href="pages.html" class="hero-nav-link">PAGES</a></li>
+      </ul>
+
+      <!-- Right Header Actions (Cart Button, Get Started Button & Mobile Menu Toggle) -->
+      <div class="hero-nav-actions">
+        <a href="shop.html" class="header-cart-btn js-cart-trigger" aria-label="View Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge-count">0</span>
+        </a>
+        <a href="login.html" class="btn-style2 hero-btn-get-started" aria-label="Get Started with Stackly">
+          <span class="theme-btn-arrow-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+          </span>
+          <span class="theme-btn">Get Started</span>
+          <span class="theme-btn-arrow-right">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+          </span>
+        </a>
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="mobile-menu-toggle js-mobile-toggle" aria-label="Open Navigation Menu" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Offcanvas Slide Drawer Panel -->
+  <div class="offcanvas-overlay"></div>
+  <aside class="offcanvas-panel">
+    <div class="offcanvas-header">
+      <img src="assets/images/stackly-logo.webp" alt="Stackly" width="130" height="44">
+      <button class="offcanvas-close" aria-label="Close Panel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+    </div>
+    <div class="offcanvas-body">
+      <h4 style="margin-bottom: 12px;">Contact Stackly</h4>
+      <p class="offcanvas-about">Our clinic reception and telemedicine care coordinators are available Monday through Saturday to schedule your consultation.</p>
+      <div class="offcanvas-contact-list">
+        <div class="offcanvas-contact-item">
+          <div class="offcanvas-contact-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg></div>
+          <div class="offcanvas-contact-text"><h6>Direct Clinic Phone</h6><p>+91 90909 09090</p></div>
+        </div>
+        <div class="offcanvas-contact-item">
+          <div class="offcanvas-contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div class="offcanvas-contact-text"><h6>Clinical Inquiries</h6><p>info@stackly.com</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <a href="#bookingSection" class="btn-style2 btn-teal" style="width: 100%; justify-content: center;">
+        <span class="theme-btn">Book Consultation</span>
+        <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html">
+          <img src="assets/images/stackly-logo-white.webp" alt="Stackly" width="130" height="42">
+        </a>
+        <button class="mobile-drawer-close js-mobile-close" aria-label="Close Navigation Menu" type="button">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html"><span>Home</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="about.html"><span>About Us</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="services.html"><span>Services</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="project.html"><span>Case Studies / Projects</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="shop.html"><span>Shop / Products</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="blog.html"><span>Scientific Blog</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item active"><a href="contact.html"><span>Contact Us</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+        <li class="mobile-nav-item"><a href="pages.html"><span>Pages & Tools</span> <span class="material-symbols-outlined" style="font-size: 1.15rem;">arrow_forward</span></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn-style2" style="width: 100%; justify-content: center;">
+        <span class="theme-btn">Get Started</span>
+        <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+      </a>
+      <div class="mobile-drawer-contact-strip">
+        <a href="tel:+919090909090" class="mobile-drawer-contact-item">
+          <span class="material-symbols-outlined">call</span>
+          <span>+91 90909 09090</span>
+        </a>
+        <a href="mailto:info@stackly.com" class="mobile-drawer-contact-item">
+          <span class="material-symbols-outlined">mail</span>
+          <span>info@stackly.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================
+       SECTION 2: PAGE TITLE BANNER (Breadcrumb Hero)
+  =================================================================== -->
+  <section class="page-title-banner">
+    <div class="container">
+      <h1>Contact Us & Clinical Consultations</h1>
+      <div class="breadcrumb-trail">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Contact Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 3: 4 ELEVATED CONTACT & INTAKE CHANNELS
+  =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap text-center reveal-fade">
+        <span class="sub-title">CONNECT WITH CLINICAL SPECIALISTS</span>
+        <h2 class="main-title">Fast, direct channels to our nutrition care team</h2>
+        <p class="section-desc">Whether you prefer visiting our modern clinic in Salem, calling our intake desk, or connecting via encrypted video, our team is ready to guide your care.</p>
+      </div>
+
+      <div class="contact-cards-grid-4">
+        <!-- Card 1: Direct Phone -->
+        <div class="contact-card-v2 reveal-stagger">
+          <div class="contact-card-top-row">
+            <div class="contact-icon-bubble">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+            </div>
+            <span class="badge-pill pill-emerald" style="font-size: 0.72rem; padding: 3px 10px;">Live Intake Open</span>
+          </div>
+          <h4 class="contact-card-title">Direct Intake Phone</h4>
+          <p class="contact-card-desc">Immediate telephone scheduling and dietary triage with our registered intake nurses.</p>
+          <div class="contact-card-value">
+            <a href="tel:+919090909090">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+              <span>+91 90909 09090</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Medical Email -->
+        <div class="contact-card-v2 reveal-stagger">
+          <div class="contact-card-top-row">
+            <div class="contact-icon-bubble">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <span class="badge-pill pill-teal" style="font-size: 0.72rem; padding: 3px 10px;">2-Hour Response</span>
+          </div>
+          <h4 class="contact-card-title">Medical Email Desk</h4>
+          <p class="contact-card-desc">Submit recent blood tests, physician referrals, or detailed dietary inquiries for review.</p>
+          <div class="contact-card-value">
+            <a href="mailto:info@stackly.com">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span>info@stackly.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Clinic Location -->
+        <div class="contact-card-v2 reveal-stagger">
+          <div class="contact-card-top-row">
+            <div class="contact-icon-bubble">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+            </div>
+            <span class="badge-pill pill-gold" style="font-size: 0.72rem; padding: 3px 10px;">Salem Center</span>
+          </div>
+          <h4 class="contact-card-title">Flagship Wellness Clinic</h4>
+          <p class="contact-card-desc">Modern consultation suites equipped with bio-impedance body-composition technology.</p>
+          <div class="contact-card-value">
+            <a href="#clinicMap" style="font-size: 0.88rem; line-height: 1.4;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+              <span>MMR Complex, Salem</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Telehealth Suite -->
+        <div class="contact-card-v2 reveal-stagger">
+          <div class="contact-card-top-row">
+            <div class="contact-icon-bubble">
+              <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+            </div>
+            <span class="badge-pill pill-purple" style="font-size: 0.72rem; padding: 3px 10px;">Encrypted HD Video</span>
+          </div>
+          <h4 class="contact-card-title">Virtual Telehealth Care</h4>
+          <p class="contact-card-desc">HIPAA-compliant virtual appointments for patients across Tamil Nadu, India, and worldwide.</p>
+          <div class="contact-card-value">
+            <a href="#bookingSection">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+              <span>Book Virtual Visit</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 4: INTERACTIVE APPOINTMENT & CONSULTATION BOOKING
+  =================================================================== -->
+  <section class="section bg-light-mint" id="bookingSection">
+    <div class="container">
+      <div class="booking-layout-grid">
+        <!-- Left: Clinical Trust & Operating Hours -->
+        <div class="booking-trust-sidebar reveal-slide-left">
+          <span class="sub-title">CLINICAL EXCELLENCE</span>
+          <h3 style="font-size: 1.7rem; font-weight: 800; color: var(--theme-color3); margin: 8px 0 16px;">Schedule your comprehensive dietary evaluation</h3>
+          <p style="color: var(--theme-text); line-height: 1.6; font-size: 0.94rem;">Every intake begins with an in-depth review of your clinical history, metabolic biomarkers, and personal wellness goals with a board-certified nutritionist.</p>
+
+          <ul class="trust-benefits-list">
+            <li class="trust-benefits-item">
+              <div class="trust-benefit-icon">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <div>
+                <h5 class="trust-benefit-title">Doctor-Led Nutrition Therapy</h5>
+                <p class="trust-benefit-desc">Physician-supervised protocols designed to treat diabetes, hypertension, and digestive conditions.</p>
+              </div>
+            </li>
+            <li class="trust-benefits-item">
+              <div class="trust-benefit-icon">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <div>
+                <h5 class="trust-benefit-title">94.8% Documented Remission Rate</h5>
+                <p class="trust-benefit-desc">Over 4,800 patients have achieved normalized biomarkers without reliance on crash diets.</p>
+              </div>
+            </li>
+            <li class="trust-benefits-item">
+              <div class="trust-benefit-icon">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <div>
+                <h5 class="trust-benefit-title">Continuous Telemetry & CGM Sync</h5>
+                <p class="trust-benefit-desc">Live continuous glucose telemetry review and weekly dietitian messaging via patient app.</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Operating Hours Box with Live Indicator -->
+          <div class="booking-hours-box">
+            <div class="booking-hours-header">
+              <h6>Intake Hours (Salem Clinic)</h6>
+              <span class="hours-live-pill">
+                <span class="hours-live-dot"></span>
+                <span>Active Today</span>
+              </span>
+            </div>
+            <table class="booking-hours-table">
+              <tr><td>Monday – Friday</td><td>8:00 AM – 7:30 PM IST</td></tr>
+              <tr><td>Saturday</td><td>9:00 AM – 5:00 PM IST</td></tr>
+              <tr><td>Sunday</td><td>Telehealth / Emergency Slots</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Consultation Form -->
+        <div class="contact-form-card reveal-slide-right">
+          <div style="margin-bottom: 24px;">
+            <span class="badge-pill pill-gold" style="margin-bottom: 10px;">INTAKE FORM</span>
+            <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--theme-color3); margin: 0 0 8px;">Book Your Clinical Consultation</h3>
+            <p style="color: var(--theme-text); font-size: 0.9rem; margin: 0;">Complete the fields below and our clinical intake coordinator in Salem will confirm your slot within 2 business hours.</p>
+          </div>
+
+          <form id="contactAppointmentForm" novalidate>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="clientName">Full Name *</label>
+                <input type="text" id="clientName" class="form-control" placeholder="e.g. Anand Kumar" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="clientEmail">Email Address *</label>
+                <input type="email" id="clientEmail" class="form-control" placeholder="e.g. anand@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="clientPhone">Phone Number *</label>
+                <input type="tel" id="clientPhone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="consultationType">Consultation Domain *</label>
+                <select id="consultationType" class="form-control" required>
+                  <option value="">Choose Clinical Domain...</option>
+                  <option value="medical">Medical Nutrition Therapy (Diabetes / Lipids)</option>
+                  <option value="gut">Digestive Health & Microbiome Protocol</option>
+                  <option value="family">Family & Pediatric Nutrition</option>
+                  <option value="senior">Senior Vitality & Bone Density (55+)</option>
+                  <option value="weight">Metabolic Weight Normalization</option>
+                  <option value="sports">Athletic Power & Endurance Fueling</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="preferredDate">Preferred Appointment Date</label>
+                <input type="date" id="preferredDate" class="form-control" value="2026-10-25">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formatPreference">Consultation Format</label>
+                <select id="formatPreference" class="form-control">
+                  <option value="in-person">In-Person Clinic Visit (Salem Center)</option>
+                  <option value="telehealth">Telehealth HD Video Consultation</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="healthMessage">Health Goals, Dietary Symptoms, or Allergies</label>
+              <textarea id="healthMessage" class="form-control" placeholder="Tell us about specific blood pressure, sugar spikes, digestive symptoms, or dietary targets you wish to resolve..."></textarea>
+            </div>
+
+            <div class="form-group" style="display: flex; align-items: center; gap: 10px; margin-bottom: 24px;">
+              <input type="checkbox" id="hasBloodWork" style="width: 18px; height: 18px; accent-color: var(--theme-color3); cursor: pointer;">
+              <label for="hasBloodWork" style="font-size: 0.88rem; color: var(--theme-text); cursor: pointer; margin: 0;">
+                I have recent medical blood tests or lipid reports to share with the dietitian
+              </label>
+            </div>
+
+            <div>
+              <button type="submit" class="btn-style2 btn-teal" style="width: 100%; justify-content: center; cursor: pointer;">
+                <span class="theme-btn">Confirm Consultation Request</span>
+                <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Animated Confirmation Box (Reveals smoothly on submission) -->
+          <div id="bookingSuccessNotice" class="booking-success-card">
+            <div class="booking-success-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <h4 style="color: #15803d; font-size: 1.35rem; margin-bottom: 8px;">Consultation Request Confirmed!</h4>
+            <p style="color: #166534; font-size: 0.94rem; line-height: 1.6; margin-bottom: 14px;">
+              Thank you, <strong id="successPatientName">Patient</strong>! We have registered your request for <strong id="successDomainName">Clinical Nutrition</strong>.
+            </p>
+            <p style="font-size: 0.86rem; color: #166534; background: rgba(34, 197, 94, 0.15); padding: 10px 16px; border-radius: 12px; margin: 0 auto; max-width: 440px;">
+              Our clinical care coordinator in Salem will call you at <strong id="successPhoneNum">+91 90909 09090</strong> within 2 hours to finalize your appointment time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 5: WORKING CLINIC MAP & DRIVING DIRECTIONS (Salem, TN)
+  =================================================================== -->
+  <section class="section" id="clinicMap">
+    <div class="container">
+      <div class="section-title-wrap text-center reveal-fade">
+        <span class="sub-title">CLINIC FACILITY LOCATION</span>
+        <h2 class="main-title">Visit our wellness center in Salem</h2>
+        <p class="section-desc">Conveniently situated at Chinna Thirupathi, Salem with dedicated patient parking and ramp accessibility.</p>
+      </div>
+
+      <div class="map-relative-wrapper reveal-fade">
+        <!-- Interactive Google Map Focused on Salem MMR Complex -->
+        <iframe 
+          title="Stackly Salem Clinic Location Map" 
+          src="https://maps.google.com/maps?q=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636003&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+          width="100%" 
+          height="450" 
+          style="border: 0; display: block;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+
+        <!-- Glassmorphic Map Floating Info Card -->
+        <div class="map-overlay-card">
+          <span class="badge-pill pill-gold" style="margin-bottom: 10px;">FLAGSHIP FACILITY</span>
+          <h4 class="map-overlay-title">Stackly Nutrition Center</h4>
+          <p class="map-overlay-address">
+            MMR COMPLEX, CHINNA THIRUPATHI,<br>
+            NEAR CHINNA MUNIYAPPAN KOVIL,<br>
+            SALEM - 636 003, TAMIL NADU
+          </p>
+          <div style="font-size: 0.84rem; color: var(--theme-text); margin-bottom: 14px;">
+            <strong style="color: var(--theme-color3);">Landmark:</strong> Directly Opposite Chinna Muniyappan Kovil.<br>
+            <strong style="color: var(--theme-color3);">Parking:</strong> Free patient car & two-wheeler parking.
+          </div>
+          <a href="https://maps.google.com/?q=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636003" target="_blank" rel="noopener noreferrer" class="btn-style2 btn-teal" style="font-size: 0.82rem; padding: 8px 18px;">
+            <span class="theme-btn">Open in Google Maps</span>
+            <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 6: 24/7 URGENT DIETARY HOTLINE STRIP
+  =================================================================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="hotline-banner-v2 reveal-fade">
+        <div style="max-width: 650px;">
+          <span class="badge-pill pill-gold" style="margin-bottom: 12px; background: rgba(245, 190, 71, 0.25); color: #ffffff; border-color: rgba(245, 190, 71, 0.6);">URGENT CARE DESK</span>
+          <h3 style="font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 800; margin: 0 0 10px; line-height: 1.25;">Have immediate dietary questions or need urgent appointment assistance?</h3>
+          <p style="color: #e2e8e5; font-size: 0.95rem; margin: 0; line-height: 1.6;">Our clinical intake coordinators and telemetry nurses are on standby to address acute blood sugar fluctuations or dietary recovery questions.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; flex-shrink: 0;">
+          <a href="404.html" class="btn-style2" style="background: var(--theme-color1); color: var(--theme-color2); font-weight: 800;">
+            <span class="theme-btn">Call +91 90909 09090</span>
+            <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+          </a>
+          <a href="404.html" class="btn-style2" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3);">
+            <span class="theme-btn">WhatsApp Quick Chat</span>
+            <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 7: CONSULTATION FREQUENTLY ASKED QUESTIONS
+  =================================================================== -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-title-wrap text-center reveal-fade">
+        <span class="sub-title">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="main-title">Everything you need to know before your visit</h2>
+        <p class="section-desc">Quick answers about our consultation intake, telehealth requirements, lab reviews, and personalized care roadmap.</p>
+      </div>
+
+      <div class="faq-accordion-wrapper" style="max-width: 860px; margin: 0 auto;">
+        <div class="accordion-item is-open reveal-stagger">
+          <div class="accordion-header">
+            <h4>What should I prepare prior to my first clinical consultation?</h4>
+            <div class="accordion-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+          </div>
+          <div class="accordion-content">
+            <p>Please gather any recent blood diagnostic reports (lipid panel, fasting blood glucose, HbA1c, thyroid levels, kidney enzymes) conducted within the last 6 months, along with a 3-day log of your typical dietary habits. You can upload these directly via email or present them at reception.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal-stagger">
+          <div class="accordion-header">
+            <h4>How do Telehealth HD Video consultations work?</h4>
+            <div class="accordion-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+          </div>
+          <div class="accordion-content">
+            <p>Once your appointment is confirmed, you will receive an encrypted video link via SMS and email. No app downloads are required—simply click the link from your smartphone, tablet, or laptop browser to enter the private consultation room with your lead dietitian.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal-stagger">
+          <div class="accordion-header">
+            <h4>Does Stackly assist with health insurance coverage or wellness claims?</h4>
+            <div class="accordion-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+          </div>
+          <div class="accordion-content">
+            <p>Yes. We provide complete itemized clinical receipts and medical nutrition therapy super-bills with standardized ICD-10 medical coding for preventive care or chronic disease management reimbursement through major private insurers.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal-stagger">
+          <div class="accordion-header">
+            <h4>How soon after the intake do I receive my personalized nutrition plan?</h4>
+            <div class="accordion-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+          </div>
+          <div class="accordion-content">
+            <p>Your custom therapeutic nutrition blueprint, rotating meal templates, pantry staples guide, and targeted macro parameters are published to your patient portal within 24 to 48 hours following your diagnostic review.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 8: CLINICAL RESEARCH NEWSLETTER & GLOBAL FOOTER
+  =================================================================== -->
+  <section class="section bg-light-mint" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="newsletter-banner reveal-fade">
+        <div class="newsletter-info">
+          <div class="newsletter-badge-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            28,000+ Active Subscribers
+          </div>
+          <h3>Subscribe to Clinical Research Updates</h3>
+          <p>Receive weekly science-backed diet plans, healthy seasonal recipes, and clinical wellness breakthroughs delivered directly to your inbox.</p>
+          <div class="newsletter-perks-list">
+            <span class="newsletter-perk-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Weekly Meal Prep PDFs
+            </span>
+            <span class="newsletter-perk-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              100% Evidence-Grade Science
+            </span>
+            <span class="newsletter-perk-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Zero Spam Guarantee
+            </span>
+          </div>
+        </div>
+        <div class="newsletter-form-wrapper">
+          <form class="newsletter-form" novalidate>
+            <input type="email" placeholder="Enter your email address..." required aria-label="Email address for newsletter">
+            <button type="submit">Subscribe</button>
+          </form>
+          <span class="newsletter-notice">Zero spam. We respect your medical privacy & inbox.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand"><img src="assets/images/stackly-logo-white.webp" alt="Stackly Logo" width="140" height="48"></div>
+            <p class="footer-bio">Stackly delivers clinical nutrition therapy, personalized metabolic meal plans, and ongoing dietitian support for lifelong health and wellness.</p>
+            <div class="footer-socials">
+              <a href="404.html" class="footer-social-btn" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="404.html" class="footer-social-btn" aria-label="Twitter"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z"/></svg></a>
+              <a href="404.html" class="footer-social-btn" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            </div>
+          </div>
+
+          <!-- Col 2: Company Links -->
+          <div class="footer-widget">
+            <h5>Navigation</h5>
+            <ul class="footer-links-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Clinical Services</a></li>
+              <li><a href="project.html">Case Studies & Projects</a></li>
+              <li><a href="shop.html">Shop Formulas</a></li>
+              <li><a href="blog.html">Scientific Blog</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="pages.html">Pages Directory</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Specializations -->
+          <div class="footer-widget">
+            <h5>Specializations</h5>
+            <ul class="footer-links-list">
+              <li><a href="services.html">Clinical Nutrition</a></li>
+              <li><a href="services.html">Family Nutrition</a></li>
+              <li><a href="services.html">Medical Nutrition</a></li>
+              <li><a href="services.html">Senior Dietary Care</a></li>
+              <li><a href="services.html">Metabolic Diet Planning</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Contact Info -->
+          <div class="footer-widget">
+            <h5>Get in Touch</h5>
+            <div class="footer-contact-info">
+              <div class="footer-contact-row">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                <span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span>
+              </div>
+              <div class="footer-contact-row">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+                <a href="tel:+919090909090">+91 90909 09090</a>
+              </div>
+              <div class="footer-contact-row">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <a href="mailto:info@stackly.com">info@stackly.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© Copyright 2026 by Stackly Nutrition. All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="services.html">Terms & Conditions</a>
+            <a href="contact.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Cart Slide-out Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title-wrap">
+        <h3 class="cart-drawer-title">Nutrition Cart</h3>
+        <span class="cart-drawer-count">0</span>
+      </div>
+      <button class="cart-drawer-close" aria-label="Close Shopping Cart">&times;</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="free-shipping-progress">
+        <div class="free-shipping-bar" id="cartFreeShippingBar" style="width: 0%;"></div>
+      </div>
+      <div id="cartFreeShippingNote" style="font-size: 0.8rem; color: #4a5568; margin-bottom: 12px; text-align: center;"></div>
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span id="cartSubtotalAmount">$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Clinic Delivery</span>
+        <span id="cartShippingAmount">$5.99</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Estimated Total</span>
+        <span id="cartTotalAmount">$0.00</span>
+      </div>
+      <div class="cart-footer-actions">
+        <a href="shop.html" class="btn-style2 btn-teal" style="width: 100%; justify-content: center; height: 50px; line-height: 50px;">
+          <span class="theme-btn">Proceed to Shop & Checkout</span>
+          <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+        </a>
+        <button type="button" class="btn-style2 js-close-cart-btn" style="width: 100%; justify-content: center; height: 44px; line-height: 44px; background: transparent; color: var(--theme-color2); border: 1px solid #cbd5e0;">
+          <span class="theme-btn">Continue Browsing</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
