@@ -1638,8 +1638,8 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <h4>Your cart is empty</h4>
           <p>Explore our clinical formulas, medical supplements, and precision test kits.</p>
-          <a href="shop.html" class="btn-style2 btn-teal js-close-cart-btn" style="display: inline-flex; height: 46px; line-height: 46px; padding: 0 24px;">
-            <span class="theme-btn">Shop Formulas Now</span>
+          <a href="services.html" class="btn-style2 btn-teal js-close-cart-btn" style="display: inline-flex; height: 46px; line-height: 46px; padding: 0 24px;">
+            <span class="theme-btn">Explore Services</span>
             <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
           </a>
         </div>
