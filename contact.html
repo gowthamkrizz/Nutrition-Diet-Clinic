@@ -282,10 +282,10 @@
 
         <!-- Right: Interactive Consultation Form -->
         <div class="contact-form-card reveal-slide-right">
-          <div style="margin-bottom: 24px;">
-            <span class="badge-pill pill-gold" style="margin-bottom: 10px;">INTAKE FORM</span>
-            <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--theme-color3); margin: 0 0 8px;">Book Your Clinical Consultation</h3>
-            <p style="color: var(--theme-text); font-size: 0.9rem; margin: 0;">Complete the fields below and our clinical intake coordinator in Salem will confirm your slot within 2 business hours.</p>
+          <div class="booking-form-header">
+            <span class="badge-pill pill-gold booking-form-badge">INTAKE FORM</span>
+            <h3 class="booking-form-title">Book Your Clinical Consultation</h3>
+            <p class="booking-form-desc">Complete the fields below and our clinical intake coordinator in Salem will confirm your slot within 2 business hours.</p>
           </div>
 
           <form id="contactAppointmentForm" novalidate>
@@ -338,17 +338,22 @@
               <textarea id="healthMessage" class="form-control" placeholder="Tell us about specific blood pressure, sugar spikes, digestive symptoms, or dietary targets you wish to resolve..."></textarea>
             </div>
 
-            <div class="form-group" style="display: flex; align-items: center; gap: 10px; margin-bottom: 24px;">
-              <input type="checkbox" id="hasBloodWork" style="width: 18px; height: 18px; accent-color: var(--theme-color3); cursor: pointer;">
-              <label for="hasBloodWork" style="font-size: 0.88rem; color: var(--theme-text); cursor: pointer; margin: 0;">
+            <div class="form-group checkbox-form-group">
+              <input type="checkbox" id="hasBloodWork" class="custom-checkbox">
+              <label for="hasBloodWork" class="checkbox-label">
                 I have recent medical blood tests or lipid reports to share with the dietitian
               </label>
             </div>
 
             <div>
-              <button type="submit" class="btn-style2 btn-teal" style="width: 100%; justify-content: center; cursor: pointer;">
-                <span class="theme-btn">Confirm Consultation Request</span>
-                <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
+              <button type="submit" class="clinical-submit-btn" id="confirmConsultationBtn">
+                <span class="clinical-btn-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </span>
+                <span class="clinical-btn-text">Confirm Consultation Request</span>
+                <span class="clinical-btn-arrow">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                </span>
               </button>
             </div>
           </form>
@@ -382,35 +387,116 @@
         <p class="section-desc">Conveniently situated at Chinna Thirupathi, Salem with dedicated patient parking and ramp accessibility.</p>
       </div>
 
-      <div class="map-relative-wrapper reveal-fade">
-        <!-- Interactive Google Map Focused on Salem MMR Complex -->
-        <iframe 
-          title="Stackly Salem Clinic Location Map" 
-          src="https://maps.google.com/maps?q=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636003&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-          width="100%" 
-          height="450" 
-          style="border: 0; display: block;" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
-
-        <!-- Glassmorphic Map Floating Info Card -->
-        <div class="map-overlay-card">
-          <span class="badge-pill pill-gold" style="margin-bottom: 10px;">FLAGSHIP FACILITY</span>
-          <h4 class="map-overlay-title">Stackly Nutrition Center</h4>
-          <p class="map-overlay-address">
-            MMR COMPLEX, CHINNA THIRUPATHI,<br>
-            NEAR CHINNA MUNIYAPPAN KOVIL,<br>
-            SALEM - 636 003, TAMIL NADU
-          </p>
-          <div style="font-size: 0.84rem; color: var(--theme-text); margin-bottom: 14px;">
-            <strong style="color: var(--theme-color3);">Landmark:</strong> Directly Opposite Chinna Muniyappan Kovil.<br>
-            <strong style="color: var(--theme-color3);">Parking:</strong> Free patient car & two-wheeler parking.
+      <div class="clinic-location-showcase reveal-fade">
+        <!-- Clinic Facility Detail Card -->
+        <div class="clinic-facility-card">
+          <div class="facility-card-top">
+            <div class="facility-status-pill">
+              <span class="status-indicator-dot"></span>
+              <span>Open Today &bull; 8:00 AM &ndash; 8:00 PM</span>
+            </div>
+            <span class="badge-pill pill-gold" style="font-size: 0.72rem; padding: 4px 10px; width: fit-content; margin-bottom: 12px; display: inline-block;">FLAGSHIP FACILITY</span>
+            <h3 class="clinic-facility-title">Stackly Nutrition Center</h3>
+            <p class="clinic-facility-subtitle">Salem Clinical & Metabolic Outpatient Wing</p>
           </div>
-          <a href="https://maps.google.com/?q=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636003" target="_blank" rel="noopener noreferrer" class="btn-style2 btn-teal" style="font-size: 0.82rem; padding: 8px 18px;">
-            <span class="theme-btn">Open in Google Maps</span>
-            <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
-          </a>
+
+          <div class="facility-spec-list">
+            <div class="facility-spec-item">
+              <div class="facility-spec-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div class="facility-spec-content">
+                <h5>Physical Address</h5>
+                <p>MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem &ndash; 636 003, Tamil Nadu</p>
+              </div>
+            </div>
+
+            <div class="facility-spec-item">
+              <div class="facility-spec-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+              </div>
+              <div class="facility-spec-content">
+                <h5>Key Landmark</h5>
+                <p>Directly Opposite Chinna Muniyappan Temple (Maravaneri Main Rd)</p>
+              </div>
+            </div>
+
+            <div class="facility-spec-item">
+              <div class="facility-spec-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+              </div>
+              <div class="facility-spec-content">
+                <h5>Patient Parking & Access</h5>
+                <p>Free on-site car & two-wheeler parking with ramp accessibility</p>
+              </div>
+            </div>
+
+            <div class="facility-spec-item">
+              <div class="facility-spec-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div class="facility-spec-content">
+                <h5>Clinical Helpdesk</h5>
+                <p>+91 90909 09090 &bull; care@stackly.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="facility-action-btns">
+            <a href="https://maps.google.com/maps/dir/?api=1&destination=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636003" target="_blank" rel="noopener noreferrer" class="btn-directions">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+              <span>Get Driving Directions</span>
+            </a>
+            <div style="display: flex; gap: 10px;">
+              <button type="button" class="btn-copy-address" id="copyAddressBtn" onclick="copyClinicAddress(this)" style="flex: 1;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                <span id="copyBtnText">Copy Address</span>
+              </button>
+              <a href="tel:+919090909090" class="btn-copy-address" style="text-decoration: none; padding: 10px 14px;" title="Call Clinic Reception">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clinic Interactive Map Frame -->
+        <div class="clinic-map-frame">
+          <div class="clinic-map-header">
+            <div class="clinic-map-header-left">
+              <span class="status-indicator-dot" style="background-color: var(--theme-color3); animation: none;"></span>
+              <span>MMR Complex &bull; Chinna Thirupathi, Salem</span>
+            </div>
+            <div class="clinic-map-header-right">
+              <a href="https://maps.google.com/?q=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636003" target="_blank" rel="noopener noreferrer">
+                Open in Full Google Maps ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="clinic-map-iframe-container">
+            <!-- Interactive Google Map Focused on Salem MMR Complex -->
+            <iframe 
+              title="Stackly Salem Clinic Location Map" 
+              src="https://maps.google.com/maps?q=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636003&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+
+          <div class="clinic-map-footer-chips">
+            <span class="map-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+              10 min from Salem New Bus Stand
+            </span>
+            <span class="map-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-4-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg>
+              15 min from Salem Railway Junction
+            </span>
+            <span class="map-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Free Dedicated Patient Parking
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -427,12 +513,12 @@
           <h3 style="font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 800; margin: 0 0 10px; line-height: 1.25;">Have immediate dietary questions or need urgent appointment assistance?</h3>
           <p style="color: #e2e8e5; font-size: 0.95rem; margin: 0; line-height: 1.6;">Our clinical intake coordinators and telemetry nurses are on standby to address acute blood sugar fluctuations or dietary recovery questions.</p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 12px; flex-shrink: 0;">
-          <a href="404.html" class="btn-style2" style="background: var(--theme-color1); color: var(--theme-color2); font-weight: 800;">
+        <div class="hotline-actions-wrap">
+          <a href="tel:+919090909090" class="btn-style2" style="background: var(--theme-color1); color: var(--theme-color2); font-weight: 800;">
             <span class="theme-btn">Call +91 90909 09090</span>
             <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
           </a>
-          <a href="404.html" class="btn-style2" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3);">
+          <a href="https://wa.me/919090909090" target="_blank" rel="noopener noreferrer" class="btn-style2" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3);">
             <span class="theme-btn">WhatsApp Quick Chat</span>
             <span class="theme-btn-arrow-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg></span>
           </a>
@@ -607,5 +693,52 @@
 
 
   <script src="assets/js/main.js"></script>
+  <script>
+    function copyClinicAddress(btn) {
+      const addressText = "Stackly Nutrition Center, MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003, Tamil Nadu";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addressText).then(() => {
+          showCopiedFeedback(btn);
+        }).catch(() => {
+          fallbackCopy(addressText, btn);
+        });
+      } else {
+        fallbackCopy(addressText, btn);
+      }
+    }
+
+    function fallbackCopy(text, btn) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+        showCopiedFeedback(btn);
+      } catch (err) {
+        console.error("Copy failed", err);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    function showCopiedFeedback(btn) {
+      const label = btn.querySelector("#copyBtnText");
+      if (label) {
+        const originalText = label.textContent;
+        label.textContent = "Address Copied! ✓";
+        btn.style.borderColor = "#15803d";
+        btn.style.color = "#15803d";
+        btn.style.background = "rgba(34, 197, 94, 0.1)";
+        setTimeout(() => {
+          label.textContent = originalText;
+          btn.style.borderColor = "";
+          btn.style.color = "";
+          btn.style.background = "";
+        }, 2200);
+      }
+    }
+  </script>
 </body>
 </html>
