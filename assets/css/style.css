@@ -1124,10 +1124,24 @@ button, input, select, textarea {
   }
 }
 
+.hero-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hero-brand-logo:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
 .hero-brand-logo img {
   height: 48px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .hero-nav-menu {
@@ -1338,6 +1352,8 @@ button, input, select, textarea {
 /* Bottom Right Floating Video Card */
 .hero-video-box-corner {
   position: absolute;
+  display: block;
+  text-decoration: none;
   bottom: 36px;
   right: 44px;
   width: 250px;
@@ -1530,7 +1546,8 @@ button, input, select, textarea {
   .hero-navbar-inner.is-fixed {
     padding: 8px 14px !important;
   }
-  .hero-brand-logo img {
+  .hero-brand-logo img,
+  .footer-brand img {
     height: 32px !important;
     width: auto !important;
   }
@@ -2396,10 +2413,56 @@ button, input, select, textarea {
 .about-call-box {
   display: flex;
   align-items: center;
-  gap: 28px;
-  padding-top: 24px;
-  border-top: 1px solid var(--theme-border);
+  gap: 32px;
+  padding-top: 28px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(1, 78, 78, 0.12);
   flex-wrap: wrap;
+}
+
+.call-direct-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.call-direct-link:hover {
+  transform: translateY(-2px);
+}
+
+.call-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  background: var(--theme-color3);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(1, 78, 78, 0.25);
+  position: relative;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.call-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #ffffff;
+  transition: fill 0.25s ease;
+}
+
+.call-direct-link:hover .call-icon {
+  background: var(--theme-color1);
+  box-shadow: 0 8px 24px rgba(249, 214, 123, 0.45);
+}
+
+.call-direct-link:hover .call-icon svg {
+  fill: var(--theme-color3);
 }
 
 .pulse-radar {
@@ -2409,13 +2472,47 @@ button, input, select, textarea {
 .pulse-radar::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: -6px;
   border-radius: 50%;
   border: 2px solid var(--theme-color1);
   animation: radarPulse 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  pointer-events: none;
+}
+
+.call-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-text span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  margin-bottom: 3px;
+  line-height: 1.2;
+}
+
+.call-text strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--theme-color2);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  transition: color 0.25s ease;
+}
+
+.call-direct-link:hover .call-text strong {
+  color: var(--theme-color3);
+}
+
+@media (max-width: 540px) {
+  .about-call-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }
 
 /* ===================================================================
@@ -4984,10 +5081,25 @@ button, input, select, textarea {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+  margin-bottom: 22px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.footer-brand:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
 .footer-brand img {
   height: 48px;
   width: auto;
-  margin-bottom: 22px;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-bio {
@@ -8867,3 +8979,43 @@ img, video, iframe {
   color: var(--theme-color1);
   display: flex;
 }
+
+/* ===================================================================
+   HEADER & FOOTER LOGO ALIGNMENT (Guarantees Identical View Across All Devices)
+=================================================================== */
+.site-footer .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 44px !important;
+  padding-right: 44px !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1200px) {
+  .site-footer .container {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .site-footer .container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
